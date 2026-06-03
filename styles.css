@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body{
+    /* font-family: 'Kiwi Maru', serif; */
+    font-family: 'Noto Sans JP', sans-serif;
+    padding: 0px 120px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    display:block;
+}
+
+img{
+    max-width: 100%;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 20px 120px;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+
+
+.header-nav{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}   
+
+
+
+.notice-wrap ul{
+    margin: 0px auto;
+    width: 80%;
+    max-width: 800px;
+    padding: 0px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+@media screen and (min-width: 1000px) {
+    /* .header-nav {
+        display: none;
+    } */
+}   
