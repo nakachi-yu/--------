@@ -242,17 +242,12 @@ header {
 /* ↓---料金プラン--- */
 
 /* 料金プランのアイコン */
-.price img {
-    width: 50px;
-    height: auto;
-}
 
-/* .price-table{
-    border: 1px solid ;
-} */
+
+
 
 table {
-    margin: 0 auto;
+    margin: 32px auto;
     border-collapse: collapse;
     border-spacing: 0;
 }
@@ -290,7 +285,7 @@ thead th:nth-child(3) {
 }
 
 thead th:last-child {
-    width: 400px;
+
     color: #ffffff;
     background-color: #007DAF;
     border: 4px solid #F2C35E;
@@ -367,6 +362,17 @@ tbody span {
     font-size: 32px;
 }
 
+.recommend {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: -90px;
+    right: -60px;
+    width: 150px;
+}
+
 
 /* 黄色の枠線 */
 thead th:last-child,
@@ -381,21 +387,39 @@ tbody tr:last-child td:last-child {
 }
 
 
+
 /* その他の料金（下の水色ボックス） */
 .price-info {
     background-color: #EAF9FD;
+    width: 100%;
+    max-width: 1054px;
+    min-height: 170px;
     padding: 15px 30px;
+    margin: 0 auto;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 40px;
+    align-items: start;
     flex-wrap: wrap;
     font-size: 24px;
 }
 
-（水色の四角形のli） .price-info ul {
-    padding-left: 45px;
+.info-box:nth-child(3) {
+    grid-column: 2;
+    margin-top: -50px;
 }
+
+（水色の四角形のli） .info-box ul {
+    padding-left: 0px;
+    list-style-position: inside;
+}
+
+.info-box li {
+    margin-left: 50px;
+}
+
+
 
 
 
@@ -408,6 +432,11 @@ tbody tr:last-child td:last-child {
     gap: 20px;
 }
 
+
+.flow-card {
+    background-color: #0c6680;
+    clip-path: polygon(84% 0, 97% 49%, 85% 100%, 0% 100%, 14% 49%, 0% 0%);
+}
 
 /* (01. 02. 03. 04.)の数字部分 */
 .flow-number {
@@ -453,6 +482,7 @@ tbody tr:last-child td:last-child {
     display: flex;
     align-items: center;
     gap: 5px;
+    margin-bottom: 10px;
 }
 
 /* フッターコンテンツの文章部分 */
