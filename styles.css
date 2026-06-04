@@ -80,6 +80,24 @@ header {
 
 /* ---サービス内容---- */
 
+.card{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-top{
+    background-color: #E4F0FF;
+    width: 198px;
+    height: 203px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+
 /* ---対応エリア--- */
 
 /* ---料金プラン--- */
