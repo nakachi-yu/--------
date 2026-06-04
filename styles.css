@@ -52,34 +52,37 @@ header {
 }
 
 
-/* （ヘッダーのナビ部分） */
+/* （ヘッダーのナビ全体） */
 .header-nav {
     list-style-type: none;
     display: flex;
     gap: 20px;
 }
 
+/* ヘッダーのナビ文字 */
 .header-nav a {
     font-size: 20px;
     align-items: center;
-    
+
 }
 
 /* ヘッダーのナビ部分の予約アイコン */
-.contact-btn{
+.contact-btn {
     background-color: #F9833F;
     color: #ffffff;
     font-size: 20px;
     padding: 10px 20px;
     border-radius: 10px;
-    display:block;
-    
+    display: block;
+
 }
 
 /* ----ファーストビュー--- */
 
 /* ---ご利用にあたって--- */
 
+
+/* ご利用についての赤い外枠 */
 .notice-wrap {
     padding: 40px 0px;
     border-radius: 8px;
@@ -88,6 +91,7 @@ header {
     margin: 56px 0px;
 }
 
+/* ご利用についてのタイトル */
 .notice-wrap h2 {
     margin-bottom: 32px;
     font-size: 28px;
@@ -95,23 +99,27 @@ header {
     color: black;
 }
 
+/* ご利用についての箇条書き */
 .notice-wrap ul {
-       display: grid;
-       grid-template-columns: repeat(2, 1fr);
-       gap: 10px 20px;
-       flex-wrap: wrap;
-       justify-items: start;
-       margin: 0 auto;
-       width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 20px;
+    flex-wrap: wrap;
+    justify-items: start;
+    margin: 0 auto;
+    width: fit-content;
 }
 
-.notice-wrap li{
+/* ご利用についての箇条書き */
+.notice-wrap li {
     font-size: 16px;
 }
 
-/* ---サービス内容---- */
+/* -------------サービス内容---- */
 
-.service-list{
+
+/* タイトル以外のカード全て */
+.service-list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -119,20 +127,27 @@ header {
 
 }
 
-.card{
+/* 青いカードと黒文字詳細をまとめたもの　*/
+.card {
     width: 198px;
 }
 
-.card ul{
+
+/* 青いカードの下にある黒文字詳細 （箇条書き全体）*/
+.card ul {
     margin: 0;
     padding-left: 20px;
 }
 
-.card li{
+
+/* 青いカードの下にある黒文字詳細 （箇条書き）*/
+.card li {
     font-size: 16px;
 }
 
-.card-top{
+
+/* 青いカード */
+.card-top {
     background-color: #E4F0FF;
     width: 198px;
     height: 203px;
@@ -146,23 +161,30 @@ header {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.message{
+
+/* あなたのニーズに合わせて自由にカスタマイズ可能 */
+.message {
     font-size: 32px;
     font-weight: bold;
     text-align: center;
     border-bottom: 3px solid #007DAF;
 }
+
+
+
+
+
 /* ---対応エリア--- */
 
-/* （地域リスト） */
-.area-list{
+/* 地域リスト */
+.area-list {
     font-size: 32px;
     margin: 0 auto;
     width: 480px;
 }
 
-/* （　角丸の水色　江戸川区　浦安市　市川市） */
-.area-list li{
+/* 角丸の水色　江戸川区　浦安市　市川市 */
+.area-list li {
     background-color: #9FD8EF;
     padding: 10px 20px;
     border-radius: 30px;
@@ -171,31 +193,33 @@ header {
     text-align: center;
 }
 
-/* （東京と千葉の列） */
-.area-row{
+/* 東京と千葉の列 */
+.area-row {
     border-bottom: 3px solid #2A5596;
     display: flex;
     gap: 20px;
     align-items: center;
     justify-content: flex-start;
-   
+
 }
 
-.prefecture{
+/* 東京都と千葉の文字 */
+.prefecture {
     min-width: 100px;
 }
 
 /* （家のイラスト） */
-.area img{
+.area img {
     width: 100%;
     max-width: 900px;
     display: block;
     margin: 0 auto;
-    
-    
+
+
 }
 
-.city-list{
+/* 江戸川区、浦安市と市川市のul */
+.city-list {
     list-style-type: none;
     display: flex;
     justify-content: center;
@@ -204,11 +228,17 @@ header {
     margin: 0;
 
 }
-.area-note{
+
+
+/* 下の※印 */
+.area-note {
     font-size: 16px;
     text-align: center;
     margin-bottom: 15px;
 }
+
+
+
 /* ---料金プラン--- */
 
 
@@ -216,7 +246,7 @@ header {
 
 
 /* その他の料金（下の水色ボックス） */
-.price-info{
+.price-info {
     background-color: #EAF9FD;
     padding: 15px 30px;
     border-radius: 10px;
@@ -227,15 +257,16 @@ header {
     font-size: 24px;
 }
 
-.price-info ul{
-   padding-left: 45px;
+（水色の四角形のli） .price-info ul {
+    padding-left: 45px;
 }
 
 
 
 /* ---ご利用の流れ--- */
-
-.flow-list{
+/* 
+（タイトル以外の下の詳細） */
+.flow-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
@@ -243,23 +274,21 @@ header {
 
 
 /* (01. 02. 03. 04.)の数字部分 */
-.flow-number{
+.flow-number {
     font-size: 64px;
     font-weight: bold;
     color: #1856A2;
 }
 
 /* (お問合せからサービス開始までの流れのタイトル部分) */
-.flow-card h3{
+.flow-card h3 {
     font-size: 24px;
     margin: 10px 0;
 }
 
 /* ---お問い合わせ ---*/
 
-/*---フッター ---*/
-
-/* フッターコンテンツ */
+/* フッターコンテンツの全体 */
 .footer-contact {
     display: flex;
     flex-direction: column;
@@ -269,14 +298,19 @@ header {
     background-color: #9FD8EF;
 }
 
+
+/* フッターコンテンツのお問合せの文字 */
 .footer-contact h2 {
     font-size: 40px;
 }
 
+
+/* フッターコンテンツのアイコン */
 .footer-contact img {
     width: 46px;
 }
 
+/* 時間、電話番号、定休日のli */
 .footer-contact li {
     list-style-type: none;
     font-size: 28px;
@@ -285,10 +319,13 @@ header {
     gap: 5px;
 }
 
+/* フッターコンテンツの文章部分 */
 .footer-contact p {
     font-size: 24px;
 }
 
+
+/* フッターコンテンツの予約ボタン */
 .footer-btn {
     background-color: #F9833F;
     color: #ffffff;
@@ -300,7 +337,9 @@ header {
     gap: 10px;
 }
 
-/* フッターナビ */
+/* フッターナビ ---------------*/
+
+/* フッターナビの全体 */
 .footer-nav {
 
     display: flex;
@@ -314,11 +353,14 @@ header {
     flex-wrap: wrap;
 }
 
+/* フッターナビの矢印アイコン */
 .footer-nav img {
     width: 30px;
 
 }
 
+
+/* フッターナビのクリック可能な範囲 */
 .footer-nav a {
     display: flex;
     align-items: center;
