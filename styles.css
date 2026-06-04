@@ -1,49 +1,49 @@
-/* 共通*/
-*{
+/*--- 共通----*/
+* {
     margin: 0;
-    padding: 0; 
+    padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     /* font-family: 'Kiwi Maru', serif; */
     font-family: 'Noto Sans JP', sans-serif;
     padding: 0px 120px;
 }
 
-a{
+a {
     color: black;
     text-decoration: none;
-    display:block;
+    display: block;
 }
 
-img{
+img {
     max-width: 100%;
 }
 
-/* ヘッダー */
+/* ---ヘッダー--- */
 header {
     background-color: #ffffff;
     padding: 20px 120px;
-    display: flex; 
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
 }
 
 
 
-.header-nav{
+.header-nav {
     list-style-type: none;
     display: flex;
     gap: 20px;
-}   
+}
 
-/* ファーストビュー */
+/* ----ファーストビュー--- */
 
-/* ご利用にあたって */
+/* ---ご利用にあたって--- */
 
-.notice-wrap ul{
+.notice-wrap ul {
     margin: 0px auto;
     width: 80%;
     max-width: 800px;
@@ -53,17 +53,83 @@ header {
 }
 
 
-/* サービス内容 */
+/* ---サービス内容---- */
 
-/* 対応エリア */
+/* ---対応エリア--- */
 
-/* 料金プラン */
+/* ---料金プラン--- */
 
-/* ご利用の流れ */
+/* ---ご利用の流れ--- */
 
-/* お問い合わせ */
+/* ---お問い合わせ ---*/
 
-/* フッター */
+/*---フッター ---*/
+
+/* フッターコンテンツ */
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 25px;
+    background-color: #9FD8EF;
+}
+
+.footer-contact h2 {
+    font-size: 40px;
+}
+
+.footer-contact img {
+    width: 46px;
+}
+
+.footer-contact li {
+    list-style-type: none;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-contact p {
+    font-size: 24px;
+}
+
+.footer-btn {
+    background-color: #F9833F;
+    color: #ffffff;
+    font-size: 32px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* フッターナビ */
+.footer-nav {
+
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0px;
+    margin-top: 56px;
+    border-top: 1px dotted #676161;
+    border-bottom: 1px dotted #676161;
+    background-color: #EAF9FD;
+}
+
+.footer-nav img {
+    width: 30px;
+
+}
+
+.footer-nav a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+}
 
 /* スマホ表示 */
 
@@ -71,4 +137,4 @@ header {
     /* .header-nav {
         display: none;
     } */
-}   
+}
