@@ -31,6 +31,10 @@ h2 {
     color: #0c6680;
 }
 
+section{
+    margin: 56px 0;
+}
+
 /* ---ヘッダー--- */
 header {
     background-color: #ffffff;
@@ -427,22 +431,79 @@ tbody tr:last-child td:last-child {
 /* 
 （タイトル以外の下の詳細） */
 .flow-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    flex-wrap: wrap;
+}
+
+/* 詳細の小文字（文字サイズと範囲） */
+.flow-card p{
+    font-size: 16px;
+    width: 230px;
 }
 
 
-.flow-card {
-    background-color: #0c6680;
+/* 矢印図形（形と文字の位置） */
+.flow-card{
     clip-path: polygon(84% 0, 97% 49%, 85% 100%, 0% 100%, 14% 49%, 0% 0%);
+    width: 350px;
+    height: 261px;
+
+    text-align: left;
+    padding: 60px 0px 0px 55px;
 }
+
+/* 図形と文字と数字のセット（数字の基準となる範囲と図形の間隔） */
+.flow-item{
+     position: relative;
+      margin-left: -39px;
+}
+
+.flow-item:first-child{
+    margin-left: 0px;
+}
+
+
+ /* 矢印図形（01色） */
+.flow-item:first-child .flow-card{
+    background-color: #E2EEFC;
+    
+}
+
+ /* 矢印図形（02色） */
+.flow-item:nth-child(2) .flow-card{
+    background-color: #D0E6FB;
+}
+
+ /* 矢印図形（03色） */
+.flow-item:nth-child(3) .flow-card{
+    background-color: #CDDDF7;
+}
+
+ /* 矢印図形（04色） */
+.flow-item:last-child .flow-card{
+    background-color: #D0DEEF;
+}
+
+
+/* 03のh3のカーニング */
+.flow-item:nth-child(3) h3{
+    letter-spacing: -0.07em;
+}
+
+
+
 
 /* (01. 02. 03. 04.)の数字部分 */
 .flow-number {
     font-size: 64px;
     font-weight: bold;
     color: #1856A2;
+    position: absolute;
+    z-index: 999;
+    top: -35px;
+    left: 20px;
 }
 
 /* (お問合せからサービス開始までの流れのタイトル部分) */
