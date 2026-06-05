@@ -8,8 +8,7 @@
 body {
     /* font-family: 'Kiwi Maru', serif; */
     font-family: 'Noto Sans JP', sans-serif;
-    padding: 0px 120px;
-    padding-top: 120px;
+    padding-top: 130px;
     align-items: center;
 }
 
@@ -31,28 +30,36 @@ h2 {
     color: #0c6680;
 }
 
-section{
+section {
     margin: 56px 0;
 }
 
 /* ---ヘッダー--- */
+
+/* ヘッダー全体（レイアウト、サイズや色と線と影、上表示） */
 header {
-    background-color: #ffffff;
-    padding: 20px 120px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-weight: bold;
+
+    height: 140px;
+    width: 100%;
+    padding: 10px 120px 0px 120px;
+    background-color: #ffffff;
     border-bottom: 1px solid #e4e4e4;
     box-shadow: 0px 4px 4px rgba(143, 143, 143, 0.1);
+
     position: fixed;
+    z-index: 1000;
     top: 0;
     left: 0;
-    width: 100%;
-    z-index: 1000;
-    height: 100px;
+}
 
-
+/* ロゴ */
+.logo {
+    margin: 50px;
+    display: block;
 }
 
 
@@ -60,13 +67,17 @@ header {
 .header-nav {
     list-style-type: none;
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
 }
 
 /* ヘッダーのナビ文字 */
 .header-nav a {
     font-size: 20px;
+    display: flex;
     align-items: center;
+    gap: 5px;
 
 }
 
@@ -83,8 +94,61 @@ header {
 
 /* ----ファーストビュー--- */
 
+/* ファーストビューの全体（文字と写真を横並びにした） */
+.fv{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* キャッチコピー（左範囲） */
+.fv-container{
+    width: 720;
+    height: 596px;
+}
+
+/* キャッチコピー（文字サイズ、文字色） */
+.fv-container h1{
+    color: #000;
+    font-size: 60px;
+}
+
+/* fvの詳細（文字サイズ） */
+.fv-container p{
+    font-size: 16px;
+}
+
+
+/* fvのボタン（レイアウト、文字設定） */
+.fv-a{
+    font-size: 20px;
+    background-color: #F2945E;
+    color: #FFF8E8;
+    border-color: transparent;
+    border-radius: 10px;
+    padding: 20px 10px;
+    gap: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 写真サイズ */
+.slideshoe img{
+    width: 720px;
+    height: 596px;
+}
+
+
 /* ---ご利用にあたって--- */
 
+
+/* ご利用についての全体（中央に寄せた） */
+.container-notice {
+    max-width: 1130px;
+    margin: 0 auto;
+}
 
 /* ご利用についての赤い外枠 */
 .notice-wrap {
@@ -93,6 +157,7 @@ header {
     border: 4px dotted #BD373A;
     padding: 56px 28px;
     margin: 56px 0px;
+
 }
 
 /* ご利用についてのタイトル */
@@ -106,17 +171,20 @@ header {
 /* ご利用についての箇条書き */
 .notice-wrap ul {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px 20px;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    gap: 10px 50px;
     flex-wrap: wrap;
     justify-items: start;
     margin: 0 auto;
     width: fit-content;
+    padding-left: 40px;
 }
 
 /* ご利用についての箇条書き */
 .notice-wrap li {
     font-size: 16px;
+    max-width: 550px;
 }
 
 /* -------------サービス内容---- */
@@ -127,7 +195,7 @@ header {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
 
 }
 
@@ -172,6 +240,8 @@ header {
     font-weight: bold;
     text-align: center;
     border-bottom: 3px solid #007DAF;
+    max-width: 750px;
+    margin: 0 auto;
 }
 
 
@@ -255,6 +325,14 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+/* 保留中 */
+/* .square{
+    position: absolute;
+    color: transparent;
+    background-color: #FBDAC7;
+    width: ;
+} */
 
 th,
 td {
@@ -402,25 +480,29 @@ tbody tr:last-child td:last-child {
     margin: 0 auto;
     border-radius: 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto;
     gap: 10px 40px;
     align-items: start;
     flex-wrap: wrap;
     font-size: 24px;
 }
 
+/* お支払方法の部分（上にあげている） */
 .info-box:nth-child(3) {
     grid-column: 2;
-    margin-top: -50px;
+    margin-top: -70px;
 }
 
-（水色の四角形のli） .info-box ul {
+/* （水色の四角形のul）  */
+.info-box ul {
     padding-left: 0px;
     list-style-position: inside;
 }
 
+/* 水色の四角形のli （左を開けることで四角と点々を揃えた） */
 .info-box li {
     margin-left: 50px;
+    max-width: 500px;
 }
 
 
@@ -438,14 +520,14 @@ tbody tr:last-child td:last-child {
 }
 
 /* 詳細の小文字（文字サイズと範囲） */
-.flow-card p{
+.flow-card p {
     font-size: 16px;
     width: 230px;
 }
 
 
 /* 矢印図形（形と文字の位置） */
-.flow-card{
+.flow-card {
     clip-path: polygon(84% 0, 97% 49%, 85% 100%, 0% 100%, 14% 49%, 0% 0%);
     width: 350px;
     height: 261px;
@@ -455,40 +537,40 @@ tbody tr:last-child td:last-child {
 }
 
 /* 図形と文字と数字のセット（数字の基準となる範囲と図形の間隔） */
-.flow-item{
-     position: relative;
-      margin-left: -39px;
+.flow-item {
+    position: relative;
+    margin-left: -39px;
 }
 
-.flow-item:first-child{
+.flow-item:first-child {
     margin-left: 0px;
 }
 
 
- /* 矢印図形（01色） */
-.flow-item:first-child .flow-card{
+/* 矢印図形（01色） */
+.flow-item:first-child .flow-card {
     background-color: #E2EEFC;
-    
+
 }
 
- /* 矢印図形（02色） */
-.flow-item:nth-child(2) .flow-card{
+/* 矢印図形（02色） */
+.flow-item:nth-child(2) .flow-card {
     background-color: #D0E6FB;
 }
 
- /* 矢印図形（03色） */
-.flow-item:nth-child(3) .flow-card{
+/* 矢印図形（03色） */
+.flow-item:nth-child(3) .flow-card {
     background-color: #CDDDF7;
 }
 
- /* 矢印図形（04色） */
-.flow-item:last-child .flow-card{
+/* 矢印図形（04色） */
+.flow-item:last-child .flow-card {
     background-color: #D0DEEF;
 }
 
 
 /* 03のh3のカーニング */
-.flow-item:nth-child(3) h3{
+.flow-item:nth-child(3) h3 {
     letter-spacing: -0.07em;
 }
 
