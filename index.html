@@ -13,19 +13,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="mobile.css">
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mobile.css">
+
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+
+    <script src="js/main.js"></script>
+
 </head>
 
 <body>
-    <header class="header">
+    <header>
 
 
-        <h1 class="logo"><img src="img/logo-mark.jpg" alt="にゃんぽん" sizes="98px"></h1>
+        <h1 class="logo"><img src="img/logo-mark.jpg" alt="にゃんぽん"></h1>
         <nav>
 
-            <ul class="header-nav">
+            <ul>
 
                 <li>
                     <a href="#"><img src="img/icon-nav-service.png" alt="">サービスのご案内</a>
@@ -40,33 +47,44 @@
                 <li>
                     <a href="#"><img src="img/icon-nav-flow.png" alt="">ご利用の流れ</a>
                 </li>
-                <li>
-                    <a href="#" class="contact-btn"><img src="img/icon-nav-contact.png" alt="">ご予約・お問合せ</a>
-                </li>
 
             </ul>
-
+            <a href="#" class="contact-btn"><img src="img/icon-nav-contact.png" alt="">ご予約・お問合せ</a>
         </nav>
 
     </header>
 
     <main>
+        <button>
+            <img src="img/Vector.png" alt="">
+            TOP
+        </button>
+
 
         <section class="fv">
+            
             <div class="fv-container">
-                <h1>
-                    <span>家事を支えて、</span>
-                    <span> 暮らしにゆとりを。</span>
-                </h1>
-                <p>こちら家事代行サービスです。 日常の家事を、安心して任せられるサポートをご提供します。</p>
-                <a href="" class="fv-a"><img src="img/icon-nav-contact.png" alt="">ご予約・お問合せ</a>
+                <div class="fv-detail">
+                    <h1>
+                        <span>家事を支えて、</span>
+                        <span> 暮らしにゆとりを。</span>
+                    </h1>
+
+                    <p>こちら家事代行サービスです。 <br>日常の家事を、安心して任せられるサポートをご提供します。</p>
+                    <a href="" class="fv-a"><img src="img/icon-nav-contact.png" alt="">ご予約・お問合せ</a>
+                    <img src="img/ilst.png" alt="" class="ilst">
+                </div>
+                <div class="scroll">
+                <span>Scroll</span>
             </div>
+            </div>
+
             <div class="slideshoe">
-                <img src="img/fv-cleaning.jpg" alt="画像1">
-                <img src="img/service-cooking.jpg" alt="画像2">
-                <img src="img/service-dishwashing.jpg" alt="画像3">
-                <img src="img/service-kitchen.jpg" alt="画像4">
-                <img src="img/service-laundry.jpg" alt="画像5">
+                <div><img src="img/fv-cleaning.jpg" alt="画像1"></div>
+                <div><img src="img/service-cooking.jpg" alt="画像2"></div>
+                <div> <img src="img/service-dishwashing.jpg" alt="画像3"></div>
+                <div><img src="img/service-kitchen.jpg" alt="画像4"></div>
+                <div><img src="img/service-laundry.jpg" alt="画像5"></div>
             </div>
         </section>
 
@@ -91,7 +109,7 @@
         <section class="service">
 
             <div>
-                <h2>サービス内容</h2>
+                <h2 class="section-title">サービス内容</h2>
 
                 <div class="service-list">
                     <div class="card">
@@ -166,7 +184,7 @@
         <section class="area">
             <div>
 
-                <h2>対応エリア</h2>
+                <h2 class="section-title">対応エリア</h2>
 
                 <div class="area-list">
 
@@ -200,7 +218,7 @@
         <section class="price">
             <div class="container">
 
-                <h2>料金プラン</h2>
+                <h2 class="section-title">料金プラン</h2>
 
                 <table class="price-table">
 
@@ -309,7 +327,7 @@
         </section>
         <section class="flow">
 
-            <h2>ご利用の流れ</h2>
+            <h2 class="section-title">ご利用の流れ</h2>
 
             <div class="flow-list">
                 <div class="flow-item">
@@ -363,7 +381,7 @@
             </div>
 
         </section>
-        
+
     </main>
 
     <footer class="footer">
@@ -426,8 +444,9 @@
                 <img src="img/futter-arrow.png" alt="">利用規約</a>
 
         </div>
-        
-        <p class="footer-masseg"><small>※本サイトは学習・制作を目的としたポートフォリオ作品です。一般公開は行っておりません。掲載内容については、権利者様のご了承をいただいております。</small></p>
+
+        <p class="footer-masseg"><small>※本サイトは学習・制作を目的としたポートフォリオ作品です。一般公開は行っておりません。掲載内容については、権利者様のご了承をいただいております。</small>
+        </p>
     </footer>
 
 </body>
