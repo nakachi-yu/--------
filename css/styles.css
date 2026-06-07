@@ -8,8 +8,8 @@
 body {
     /* font-family: 'Kiwi Maru', serif; */
     font-family: 'Noto Sans JP', sans-serif;
-    padding-top: 101px;
     align-items: center;
+    margin-top: 100px;
 }
 
 
@@ -27,7 +27,6 @@ img {
     font-size: 40px;
     text-align: center;
     margin-bottom: 56px;
-    margin-top: 56px;
 
     display: flex;
     align-items: center;
@@ -36,8 +35,8 @@ img {
 }
 
 
-section {
-    margin: 56px 0;
+section:not(.fv){
+    padding-block: clamp(56px, 8vw, 96px);
 }
 
 /* bodyでの共通の色（スプライト柄） */
@@ -92,7 +91,6 @@ header {
 
     height: 100px;
     width: 100%;
-    padding: 10px 20px 0 20px;
     background-color: #ffffff;
     border-bottom: 1px solid #e4e4e4;
     box-shadow: 0px 4px 4px rgba(143, 143, 143, 0.1);
@@ -106,6 +104,7 @@ header {
 /* ロゴ */
 .logo {
     width: 90px;
+    padding: 5px 0 0 10px;
 }
 
 
@@ -154,7 +153,8 @@ header a {
     background-color: #F9833F;
     color: #ffffff;
     font-size: 20px;
-    padding: 10px 25px;
+    padding: 10px 20px;
+    margin-right: 10px;
     border-radius: 10px;
 
     display: flex;
@@ -170,18 +170,25 @@ header a {
 
 /* スクロールダウンの位置 */
 .scroll {
-  position: absolute;
+  /* position: absolute;
   left: 5%;
-  bottom: 30%;
+  bottom: 30%; */
   writing-mode: vertical-rl;
   color: #2A5596;
   font-weight: bold;
+  flex: 0 0 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+  position: relative;
+  margin-bottom: 150px;
 }
 /* 線のアニメーション部分 */
 .scroll::before {
   animation: scroll 2s infinite;
   background-color: #2A5596;
-  bottom: -115px;
+  top: 100%;
   content: "";
   height: 100px;
   left: 0;
@@ -194,7 +201,7 @@ header a {
 /* 線の背景色 */
 .scroll::after {
   background-color: #ccc;
-  bottom: -115px;
+  top: 100%;
   content: "";
   height: 100px;
   left: 0;
@@ -227,13 +234,13 @@ header a {
 /* ファーストビューの全体（文字と写真を横並びにした） */
 .fv {
     width: 100%;
-    min-height: clamp(500px, 70vh,900px);;
+    min-height: clamp(500px, 70vw,900px);;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
     position: relative;
-    box-shadow: ;
+
 }
 
 .fv::after {
@@ -258,10 +265,10 @@ header a {
 .fv-container {
     width: 50%;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
+        justify-content: flex-start;
+    align-items: flex-start;
     margin-top: 56px;
+    min-height: 100v;
     
 }
 
@@ -274,8 +281,7 @@ header a {
     justify-content: center;
     gap: 10px;
     align-items: stretch;
-    
-    
+    flex: 0 0 90%;
 }
 
 .ilst {
@@ -289,7 +295,8 @@ header a {
 
 /* キャッチコピー（文字サイズ、下余白） */
 .fv-container h1 {
-    font-size: clamp(32px, 10vw, 80px);
+    font-size: clamp(32px, 5vw, 80px);
+    white-space: nowrap;
     margin-bottom: 20px;
 
 }
@@ -309,15 +316,18 @@ header a {
 
 /* fvのボタン（レイアウト、文字設定） */
 .fv-a {
-    max-width: 350px;
+    width: clamp(300px, 30vw, 350px);
     max-height: 50px;
-    font-size: 32px;
+    font-size: clamp(24px, 2vw, 32px);
     background-color: #F9833F;
     color: #FFF8E8;
     font-weight: 500;
     border-color: transparent;
     border-radius: 10px;
     padding: 30px 15px;
+    padding-block: clamp(10px, 3vw, 30px);
+    padding-inline: clamp(10px, 3vw, 15px);
+
     gap: 10px;
 
     display: flex;
@@ -355,17 +365,21 @@ header a {
 
 /* ご利用についての全体（中央に寄せた） */
 .container-notice {
-    max-width: 1130px;
     margin: 0 auto;
+    background-color: #faf8f5;
+    padding: 56px ;
 }
 
 /* ご利用についての赤い外枠 */
 .notice-wrap {
+    max-width: 1130px;
     padding: 40px 0px;
     border-radius: 8px;
     border: 4px dotted #BD373A;
     padding: 56px 28px;
-    margin: 56px 0px;
+    margin: 0 auto;
+    background-color: #fff;
+    
 
 }
 
@@ -446,13 +460,18 @@ header a {
 
 /* あなたのニーズに合わせて自由にカスタマイズ可能 */
 .message {
-    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(16px, 4vw, 32px);
+    white-space: nowrap;
+    width: fit-content;
     font-weight: bold;
-    text-align: center;
     border-bottom: 3px solid #007DAF;
     max-width: 750px;
-    margin: 0 auto;
-}
+    margin:56px  auto;
+    padding-inline: 20px;
+   }
 
 
 
@@ -534,6 +553,13 @@ table {
     margin: 32px auto;
     border-collapse: collapse;
     border-spacing: 0;
+    min-width: 650px;
+    width: 80%;
+    table-layout: fixed;
+}
+
+.price{
+    overflow-x: auto;
 }
 
 /* 保留中 */
@@ -548,36 +574,46 @@ th,
 td {
     border: 1px solid #245B9C;
     text-align: center;
-    padding: auto 30px;
+    padding: clamp(10px, 12vw, 20px);
 }
 
+table img{
+    width: clamp(20px, 4vw, 40px);
+}
+
+
+/* 最初の縦一列 */
 thead th:first-child {
-    width: 168px;
+    /* width: clamp(100px, 12vw, 168px); */
+    width: 15%;
     border: none;
     background: transparent;
 }
 
+/* 左2つ目の縦一列 */
 thead th:nth-child(2) {
-    width: 300px;
+    /* width: clamp(210px, 12vw, 300px); */
+    width: 23%;
     border-radius: 10px 0 0 0;
     border-top-color: transparent;
     border-left-color: transparent;
 }
 
+/* 左3つ最の縦一列 */
 thead th:nth-child(3) {
     border-top-color: transparent;
+    /* width: clamp(230px, 12vw, 500px); */
+    width: 27%;
+    
 }
 
 tbody tr:first-child th:first-child {
     border-radius: 10px 0 0 0;
 }
 
-thead th:nth-child(3) {
-    width: 349px;
-}
-
+/* 最後の縦一列 */
 thead th:last-child {
-
+     width: 35%;
     color: #ffffff;
     background-color: #007DAF;
     border: 4px solid #F2C35E;
@@ -585,8 +621,9 @@ thead th:last-child {
 
 }
 
+/* ペットシッター弁用 */
 thead th:last-child p {
-    font-size: 32px;
+    font-size: clamp(18px, 2.5vw, 32px);
 }
 
 tbody tr:first-child th:first-child {
@@ -605,29 +642,34 @@ tbody tr:last-child th:first-child {
     border-left-color: transparent;
 }
 
+
+/* シッター＋家事 */
 .plan-text {
     text-align: left;
-}
-
-thead th {
-    padding: 20px;
+    font-size: clamp(12px, 2vw, 24px);
+    font-weight: 800;
+    white-space: nowrap;
 }
 
 thead p {
-    font-size: 36px;
+    font-size: clamp(24px, 3vw, 32px);
 }
 
 thead span {
-    font-size: 24px;
+    font-size: clamp(12px, 1.8vw, 18px);
 }
 
 tbody td,
 tbody th {
-    font-size: 40px;
+    font-size: clamp(20px, 5vw, 40px);
+    font-weight: bold;
+    white-space: nowrap;
 }
 
+/* 1500 */
 .plan-price {
-    font-size: 40px;
+    font-size: clamp(20px, 5vw, 40px);
+    font-weight: bold;
     color: #FF5D00;
 
 }
@@ -646,12 +688,13 @@ thead th:nth-child(3) {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: clamp(0px, 10vw, 10px);
 }
 
-
+/* 円・分 */
 tbody span {
-    font-size: 32px;
+    font-size: clamp(16px, 12vw, 24px);
+    
 }
 
 .recommend {
@@ -660,9 +703,10 @@ tbody span {
 
 .badge {
     position: absolute;
-    top: -90px;
-    right: -60px;
-    width: 150px;
+    top: -80px;
+    right: clamp(-10px, 5vw, -60px);
+    width: clamp(100px, 12vw, 150px);
+    
 }
 
 
@@ -683,24 +727,23 @@ tbody tr:last-child td:last-child {
 /* その他の料金（下の水色ボックス） */
 .price-info {
     background-color: #EAF9FD;
-    width: 100%;
+    width: 80%;
     max-width: 1054px;
     min-height: 170px;
     padding: 15px 30px;
     margin: 0 auto;
     border-radius: 10px;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 10px 40px;
+    display: flex;
     align-items: start;
+    gap: 32px;
     flex-wrap: wrap;
-    font-size: 24px;
+    font-size: clamp(16px, 3vw, 24px);
 }
 
 /* お支払方法の部分（上にあげている） */
 .info-box:nth-child(3) {
-    grid-column: 2;
-    margin-top: -70px;
+    /* grid-column: 2;
+    margin-top: -70px; */
 }
 
 /* （水色の四角形のul）  */
@@ -741,7 +784,7 @@ tbody tr:last-child td:last-child {
     clip-path: polygon(84% 0, 97% 49%, 85% 100%, 0% 100%, 14% 49%, 0% 0%);
     width: 350px;
     height: 261px;
-
+    margin-bottom: 20px;
     text-align: left;
     padding: 60px 0px 0px 55px;
 }
@@ -815,6 +858,242 @@ tbody tr:last-child td:last-child {
     padding: 20px 25px;
     background-color: #9FD8EF;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact{
+max-width: 900px;
+margin: 0 auto;
+padding: 80px 20px;
+}
+
+.contact-form{
+background: #fff;
+padding: 40px;
+border-radius: 16px;
+box-shadow: 0 4px 20px rgba(0,0,0,.08);
+width: 500px;
+height: 500px;
+}
+
+.form-group{
+display: flex;
+flex-direction: column;
+gap: 10px;
+margin-bottom: 32px;
+}
+
+.form-group label,
+.form-label{
+font-size: 24px;
+font-weight: 700;
+color: #333;
+}
+
+.required{
+display: inline-block;
+margin-left: 8px;
+padding: 2px 8px;
+background: #F9833F;
+color: #fff;
+border-radius: 20px;
+font-size: 24px;
+font-weight: 700;
+}
+
+input[type=“text”],
+input[type=“email”],
+input[type=“tel”],
+textarea{
+width: 100%;
+padding: 16px;
+border: 1px solid #D9D9D9;
+border-radius: 8px;
+font-size: 24px;
+transition: .3s;
+}
+
+input::placeholder,
+textarea::placeholder{
+color: #999;
+}
+
+input:focus,
+textarea:focus{
+outline: none;
+border-color: #007DAF;
+box-shadow: 0 0 0 4px rgba(0,125,175,.15);
+}
+
+textarea{
+resize: vertical;
+min-height: 180px;
+}
+
+.radio-item{
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 12px;
+cursor: pointer;
+font-weight: 400;
+}
+
+.radio-item input{
+width: auto;
+}
+
+.form-check{
+margin-top: 10px;
+}
+
+.agreement{
+display: flex;
+align-items: center;
+gap: 10px;
+cursor: pointer;
+}
+
+.submit-btn{
+display: block;
+width: fit-content;
+min-width: 240px;
+margin: 40px auto 0;
+padding: 18px 40px;
+border: none;
+border-radius: 10px;
+background: #F9833F;
+color: #fff;
+font-size: 18px;
+font-weight: 700;
+cursor: pointer;
+transition: .3s;
+}
+
+.submit-btn:hover{
+transform: translateY(-2px);
+box-shadow: 0 8px 20px rgba(249,131,63,.3);
+}
+
+/* タブレット */
+@media (max-width:1024px){
+
+.contact-form{
+    padding: 32px;
+}
+
+}
+
+/* スマホ */
+@media (max-width:767px){
+
+.contact{
+    padding: 56px 16px;
+}
+.contact-form{
+    padding: 24px;
+}
+.form-group label,
+.form-label{
+    font-size: 16px;
+}
+.submit-btn{
+    width: 100%;
+    min-width: auto;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* フッターコンテンツのお問合せの文字 */
