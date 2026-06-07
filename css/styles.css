@@ -104,7 +104,10 @@ header {
 /* ロゴ */
 .logo {
     width: 90px;
-    padding: 5px 0 0 10px;
+    height: 90px;
+    padding: 5px 5px 0 10px;
+    flex-shrink: 0
+    ;
 }
 
 
@@ -117,13 +120,18 @@ header nav {
     gap: 10px;
 }
 
+header nav img{
+    width: clamp(18px, 1.5vw, 21px);
+    height: clamp(18px, 1.5vw, 21px);
+}
+
 header ul {
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
     gap: 20px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 header li {
@@ -131,6 +139,7 @@ header li {
     display: block;
     justify-content: space-around;
     align-items: center;
+    font-size: clamp(10px, 1.5vw, 21px);
     
 }
 
