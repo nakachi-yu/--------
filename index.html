@@ -390,208 +390,52 @@
 
             <h2 class="footer-title">
                 お問い合わせ
-                <span>CONTACT</span>
             </h2>
 
 
+            <!-- ーーーーーーーーーーーーーーーーーーーーーー
+            お問合せフォーム
+        ーーーーーーーーーーーーーーーーーーーーーーーーー -->
+            <form action="#">
 
 
-            <div class="form-group">
-  <label for="name">
-    お名前
-    <span class="required">必須</span>
-  </label>
-  <input
-    type="text"
-    id="name"
-    name="name"
-    placeholder="例：山田 太郎"
-    required
-  >
-</div>
-
-<div class="form-group">
-  <label for="email">
-    メールアドレス
-    <span class="required">必須</span>
-  </label>
-  <input
-    type="email"
-    id="email"
-    name="email"
-    placeholder="例：sample@example.com"
-    required
-  >
-</div>
-
-<div class="form-group">
-  <label for="tel">
-    電話番号
-  </label>
-  <input
-    type="tel"
-    id="tel"
-    name="tel"
-    placeholder="例：09012345678"
-  >
-</div>
-
-<div class="form-group">
-
-  <p class="form-label">
-    お問い合わせ内容
-    <span class="required">必須</span>
-  </p>
+                <!-- お名前 -->
 
-  <label class="radio-item">
-    <input
-      type="radio"
-      name="contact-type"
-      value="サービスについて"
-      required
-    >
-    サービスについて
-  </label>
+                <p><label>お名前<span>必須</span><br>
+                        <input type="text" name="name" placeholder="例：山田　花子"></label></p>
 
-  <label class="radio-item">
-    <input
-      type="radio"
-      name="contact-type"
-      value="料金について"
-    >
-    料金について
-  </label>
 
-  <label class="radio-item">
-    <input
-      type="radio"
-      name="contact-type"
-      value="見積り依頼"
-    >
-    見積り依頼
-  </label>
+                <!-- メールアドレス -->
 
-  <label class="radio-item">
-    <input
-      type="radio"
-      name="contact-type"
-      value="予約について"
-    >
-    予約について
-  </label>
+                <P><label>メールアドレス<span>必須</span><br>
+                        <input type="email" name="mail" required></label></P>
 
-  <label class="radio-item">
-    <input
-      type="radio"
-      name="contact-type"
-      value="その他"
-    >
-    その他
-  </label>
 
-</div>
+                <!-- 電話番号 -->
 
-<div class="form-group">
-  <label for="message">
-    ご要望・ご相談内容
-  </label>
+                <p><label>電話番号<span>必須</span><br>
+                        <input type="tel" name="tel"></label></p>
 
-  <textarea
-    id="message"
-    name="message"
-    rows="6"
-    placeholder="ご質問やご要望がございましたらご記入ください"
-  ></textarea>
-</div>
+                <!-- お問い合わせ種類 -->
 
-<div class="form-check">
-  <label class="agreement">
-    <input
-      type="checkbox"
-      required
-    >
-    個人情報保護方針に同意する
-  </label>
-</div>
+                <p>お問い合わせ種類<br>
 
-<button
-  type="submit"
-  class="submit-btn"
->
-  送信する
-</button>
+                    <!--＊＊　サービスについて -->
+                    <label class="contact-font"><input type="radio" name="kind" value="0">サービスについて</label>
 
+                    <!-- ＊＊　予約について -->
+                    <label class="contact-font"><input type="radio" name="kind" value="1">予約について</label>
 
+                    <!--＊＊ その他 -->
+                    <label class="contact-font"><input type="radio" name="kind" value="2">その他</label>
+                </p>
 
 
+                <!-- 内容 -->
+                <p><label>ご相談内容<br>
+                        <textarea name="comment"></textarea></label></p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            </form>
 
             <ul class="footer-info">
 
@@ -612,16 +456,8 @@
 
             </ul>
 
-            <p class="footer-text">
-                ご依頼またはご質問やご相談がございましたら、お気軽にお問い合わせください。<br>
-                以下のフォームまたはお電話にていつでもご連絡をお待ちしています。
-            </p>
-
-            <a href="#" class="footer-btn">
-                <img src="img/icon-nav-contact.png" alt="">
-                ご予約・お問い合わせ
-            </a>
-
+            <!-- 送信 -->
+            <p><input type="submit" value="送信"></p>
         </div>
 
         <div class="footer-nav">
