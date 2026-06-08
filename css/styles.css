@@ -35,7 +35,7 @@ img {
 }
 
 
-section:not(.fv){
+section:not(.fv) {
     padding-block: clamp(56px, 8vw, 96px);
 }
 
@@ -106,8 +106,7 @@ header {
     width: 90px;
     height: 90px;
     padding: 5px 5px 0 10px;
-    flex-shrink: 0
-    ;
+    flex-shrink: 0;
 }
 
 
@@ -117,10 +116,11 @@ header nav {
     list-style: none;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+   
+     height: 100%;
 }
 
-header nav img{
+header nav img {
     width: clamp(18px, 1.5vw, 21px);
     height: clamp(18px, 1.5vw, 21px);
 }
@@ -130,8 +130,9 @@ header ul {
     justify-content: center;
     align-items: center;
     list-style: none;
-    gap: 20px;
+    
     flex-wrap: nowrap;
+    height: 100%;
 }
 
 header li {
@@ -140,7 +141,8 @@ header li {
     justify-content: space-around;
     align-items: center;
     font-size: clamp(10px, 1.5vw, 21px);
-    
+    height: 100%;
+
 }
 
 
@@ -148,13 +150,22 @@ header li {
 header a {
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding-inline: 10px;
     gap: 5px;
+    height: 100%;
 
 }
 
+header a:hover{
+    background-color: #1856A2;
+    color: #fff;
+}
 
-
-
+svg{
+    color: #007DAF;
+    background-color: #087ED2;
+}
 
 
 /* ヘッダーのナビ部分の予約アイコン */
@@ -162,7 +173,7 @@ header a {
     background-color: #F9833F;
     color: #ffffff;
     font-size: 20px;
-    padding: 10px 20px;
+    height: 40%;
     margin-right: 10px;
     border-radius: 10px;
 
@@ -179,71 +190,78 @@ header a {
 
 /* スクロールダウンの位置 */
 .scroll {
-  /* position: absolute;
+    /* position: absolute;
   left: 5%;
   bottom: 30%; */
-  writing-mode: vertical-rl;
-  color: #2A5596;
-  font-weight: bold;
-  flex: 0 0 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-self: flex-end;
-  position: relative;
-  margin-bottom: 150px;
+    writing-mode: vertical-rl;
+    color: #2A5596;
+    font-weight: bold;
+    flex: 0 0 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    position: relative;
+    margin-bottom: 150px;
 }
+
 /* 線のアニメーション部分 */
 .scroll::before {
-  animation: scroll 2s infinite;
-  background-color: #2A5596;
-  top: 100%;
-  content: "";
-  height: 100px;
-  left: 0;
-  margin: auto;
-  position: absolute;
-  right: 0;
-  width: 1px;
-  z-index: 2;
+    animation: scroll 2s infinite;
+    background-color: #2A5596;
+    top: 100%;
+    content: "";
+    height: 100px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    width: 1px;
+    z-index: 2;
 }
+
 /* 線の背景色 */
 .scroll::after {
-  background-color: #ccc;
-  top: 100%;
-  content: "";
-  height: 100px;
-  left: 0;
-  margin: auto;
-  position: absolute;
-  right: 0;
-  width: 1px;
+    background-color: #ccc;
+    top: 100%;
+    content: "";
+    height: 100px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    width: 1px;
 }
+
 /* 線のアニメーション */
 @keyframes scroll {
-  0% {
-    transform: scale(1, 0);
-    transform-origin: 0 0;
-  }
-  50% {
-    transform: scale(1, 1);
-    transform-origin: 0 0;
-  }
-  51% {
-    transform: scale(1, 1);
-    transform-origin: 0 100%;
-  }
-  100% {
-    transform: scale(1, 0);
-    transform-origin: 0 100%;
-  }
+    0% {
+        transform: scale(1, 0);
+        transform-origin: 0 0;
+    }
+
+    50% {
+        transform: scale(1, 1);
+        transform-origin: 0 0;
+    }
+
+    51% {
+        transform: scale(1, 1);
+        transform-origin: 0 100%;
+    }
+
+    100% {
+        transform: scale(1, 0);
+        transform-origin: 0 100%;
+    }
 }
 
 
 /* ファーストビューの全体（文字と写真を横並びにした） */
 .fv {
     width: 100%;
-    min-height: clamp(500px, 70vw,900px);;
+    min-height: clamp(500px, 70vw, 900px);
+    ;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -253,32 +271,30 @@ header a {
 }
 
 .fv::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 4%;
-  transform: translateX(-50%);
-  width: 150px; /* グラデーション幅 */
-  height: 100%;
-  background: linear-gradient(
-    to left,
-    transparent 0%,
-    rgba(255, 255, 255, 1) 100%,
-    transparent
-  );
-  pointer-events: none;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 4%;
+    transform: translateX(-50%);
+    width: 150px;
+    /* グラデーション幅 */
+    height: 100%;
+    background: linear-gradient(to left,
+            transparent 0%,
+            rgba(255, 255, 255, 1) 100%,
+            transparent);
+    pointer-events: none;
 }
 
 /* キャッチコピー（左範囲） */
 .fv-container {
     width: 50%;
     display: flex;
-        justify-content: flex-start;
+    justify-content: flex-start;
     align-items: flex-start;
     margin-top: 56px;
     min-height: 100v;
-    
 }
 
 
@@ -293,13 +309,14 @@ header a {
     flex: 0 0 90%;
 }
 
+
 .ilst {
     position: absolute;
     z-index: -3;
     bottom: 20px;
     right: -10px;
     width: clamp(220px, 20vw, 340px);
-    
+
 }
 
 /* キャッチコピー（文字サイズ、下余白） */
@@ -312,13 +329,13 @@ header a {
 
 .fv-container span {
     display: block;
-   
+
 }
 
 /* fvの詳細（文字サイズ） */
 .fv-container p {
-    font-size: clamp(16px, 5vw, 24px);
-    max-width: 500px;
+    font-size: clamp(16px, 2vw, 24px);
+    max-width: clamp(350px, 25vw, 500px);
     margin-bottom: 56px;
 }
 
@@ -356,13 +373,13 @@ header a {
     align-items: stretch;
 }
 
-.slideshoe div{
+.slideshoe div {
     height: 100%;
 }
 
 .slideshoe img {
     width: 100%;
-    
+
     height: 100%;
     object-fit: cover;
     display: block;
@@ -376,7 +393,7 @@ header a {
 .container-notice {
     margin: 0 auto;
     background-color: #faf8f5;
-    padding: 56px ;
+    padding: 56px;
 }
 
 /* ご利用についての赤い外枠 */
@@ -388,7 +405,7 @@ header a {
     padding: 56px 28px;
     margin: 0 auto;
     background-color: #fff;
-    
+
 
 }
 
@@ -478,9 +495,9 @@ header a {
     font-weight: bold;
     border-bottom: 3px solid #007DAF;
     max-width: 750px;
-    margin:56px  auto;
+    margin: 56px auto;
     padding-inline: 20px;
-   }
+}
 
 
 
@@ -567,7 +584,7 @@ table {
     table-layout: fixed;
 }
 
-.price{
+.price {
     overflow-x: auto;
 }
 
@@ -586,7 +603,7 @@ td {
     padding: clamp(10px, 12vw, 20px);
 }
 
-table img{
+table img {
     width: clamp(20px, 4vw, 40px);
 }
 
@@ -613,7 +630,7 @@ thead th:nth-child(3) {
     border-top-color: transparent;
     /* width: clamp(230px, 12vw, 500px); */
     width: 27%;
-    
+
 }
 
 tbody tr:first-child th:first-child {
@@ -622,7 +639,7 @@ tbody tr:first-child th:first-child {
 
 /* 最後の縦一列 */
 thead th:last-child {
-     width: 35%;
+    width: 35%;
     color: #ffffff;
     background-color: #007DAF;
     border: 4px solid #F2C35E;
@@ -703,7 +720,7 @@ thead th:nth-child(3) {
 /* 円・分 */
 tbody span {
     font-size: clamp(16px, 12vw, 24px);
-    
+
 }
 
 .recommend {
@@ -715,7 +732,22 @@ tbody span {
     top: -80px;
     right: clamp(-10px, 5vw, -60px);
     width: clamp(100px, 12vw, 150px);
-    
+    transform-origin: bottom center;
+    animation: swing 1s infinite linear;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(-5deg);
+    }
 }
 
 
@@ -864,7 +896,7 @@ tbody tr:last-child td:last-child {
 
 
 
-form span{
+form span {
     background-color: #F9833F;
     color: #fff;
     padding-inline: 5px;
@@ -872,28 +904,28 @@ form span{
     font-size: 16px;
 }
 
-form p{
+form p {
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 32px;
 }
 
-form span{
+form span {
     margin-left: 10px;
 }
 
-input[type="radio"]{
+input[type="radio"] {
     transform: scale(1.6);
     margin-right: 5px;
 }
 
-.contact-font{
-     font-size: clamp(16px, 2vw, 24px);
-     margin-right: 32px;
+.contact-font {
+    font-size: clamp(16px, 2vw, 24px);
+    margin-right: 32px;
 }
 
 
-input:not(input[type="radio"]):not(input[type="submit"]){
+input:not(input[type="radio"]):not(input[type="submit"]) {
     padding: 0 10px;
     width: 100%;
     min-width: 500px;
@@ -902,7 +934,7 @@ input:not(input[type="radio"]):not(input[type="submit"]){
     font-size: 16px;
 }
 
-textarea{
+textarea {
     padding: 0 10px;
     width: 100%;
     min-width: 500px;
@@ -912,11 +944,11 @@ textarea{
 }
 
 textarea::placeholder,
-input::placeholder{
+input::placeholder {
     font-size: 16px;
 }
 
-input[type="submit"]{
+input[type="submit"] {
     color: #fff;
     background-color: #F9833F;
     font-size: 24px;
@@ -949,7 +981,7 @@ input[type="submit"]{
 }
 
 
-.footer-contact ul{
+.footer-contact ul {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -957,7 +989,7 @@ input[type="submit"]{
 }
 
 /* 時間、電話番号、定休日のli */
-.footer-contact li{
+.footer-contact li {
     list-style-type: none;
     font-size: 24px;
     font-weight: 500;
