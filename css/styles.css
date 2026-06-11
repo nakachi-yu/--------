@@ -147,34 +147,51 @@ header li {
 
 
 /* ヘッダーのナビ文字 */
-header a {
+header a:not(.contact-btn){
     display: flex;
     justify-content: center;
     align-items: center;
     padding-inline: 10px;
     gap: 5px;
     height: 100%;
-
+    
 }
 
-header a:hover{
+header a:not(.contact-btn):hover{
     background-color: #1856A2;
     color: #fff;
 }
 
-svg{
-    color: #007DAF;
-    background-color: #087ED2;
+header a:hover .icon-nav,header a:hover .icon-area{
+    color: #fff;
 }
+
+.icon-nav, .icon-area{
+    width: clamp(18px, 3vw, 35px);
+    height: clamp(18px, 3vw, 35px);
+    color: #007DAF;
+    
+}
+
+.icon-nav path{
+    stroke-width: 4;
+}
+
+.icon-area path{
+    stroke-width: 2;
+}
+
+
+
 
 
 /* ヘッダーのナビ部分の予約アイコン */
 .contact-btn {
     background-color: #F9833F;
     color: #ffffff;
-    font-size: 20px;
-    height: 40%;
-    margin-right: 10px;
+    font-size: clamp(10px, 1.5vw, 21px);
+    padding: 10px 20px;
+    margin-right: 5px;
     border-radius: 10px;
 
     display: flex;
@@ -182,7 +199,37 @@ svg{
     align-items: center;
     gap: 10px;
     white-space: nowrap;
+
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
+
+.contact-btn svg{
+    width: clamp(18px, 2vw, 35px);
+    
+}
+
+/* .contact-btn, .contact-btn svg{
+    z-index: 1;
+} */
+
+.bg{
+    background-color: #087ED2;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    
+    position: absolute;
+    z-index: -1;
+    
+}
+
+
+
+
+
 
 /* ----ファーストビュー--- */
 
@@ -327,8 +374,10 @@ svg{
 
 }
 
-.fv-container span {
+.fv-container h1 span{
     display: block;
+    position: relative;
+    left: -200%;
 
 }
 
@@ -359,12 +408,26 @@ svg{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.fv-a svg, .btn-text{
+    position: relative;
+    z-index: 2;
+}
+
+.fv-a .bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    z-index: 1;
 }
 
 
-.fv-a img {
-    width: 30px;
-}
+
 
 /* 写真サイズ */
 .slideshoe {
