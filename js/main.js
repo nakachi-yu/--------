@@ -49,44 +49,12 @@ $('.fv-detail h1 span').animate({
 },1000);
   
 
-// $('.fv-detail h1 span').css({
-//   color:'red',
-//   left:'0',
-//   position:'relative'
-// });
 
 
 
 
-// $('.fv-detail h1 span').animate({
-//   color:'red',
-//   left:'0',
-  
-// });
 
 
-
-
-// $('.fv-detail h1 span').css('left')
-// $(window).on('load', function () {
-//   $('.fv-detail h1 span').animate({
-//     left:'0'
-//   },1000);
-  
-// });
-
-
-
-// console.log($('.fv-detail h1 span').length);
-// setTimeout(function(){
-//   $('.fv-detail h1 span').animate({
-//     left:'0'
-//   },1000);
-// },1000);
-
-
-
-// $('.ilst').css('opactity',0.5);
 
 
 
@@ -103,7 +71,9 @@ $('.fv-detail h1 span').eq(1).css({
 });
 },500);
 
-
+setTimeout(function(){
+$('.ilst').css('opacity','1');
+},2000);
 
 
 

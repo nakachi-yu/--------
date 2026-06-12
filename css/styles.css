@@ -363,6 +363,8 @@ header a:hover .icon-nav,header a:hover .icon-area{
     bottom: 20px;
     right: -10px;
     width: clamp(220px, 20vw, 340px);
+    opacity: 0;
+    transition: opacity 1s;
 
 }
 
