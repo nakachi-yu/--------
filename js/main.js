@@ -6,6 +6,10 @@ $(document).ready(function(){
 
   var duration = 300;
 
+
+//＞＞＞＞ fvのスライド＜＜＜＜＜
+// スライドショー
+
   $('.slideshoe').slick({
   dots: true,
   arrows: false,      // 矢印非表示
@@ -19,7 +23,8 @@ $(document).ready(function(){
   });
 
 
-
+//＞＞＞＞ header　navの予約・お問合せボタン＜＜＜＜＜
+// hover時の背景を左から右の変化
 
 $('.contact-btn')
         .on('mouseover', function(){
@@ -30,6 +35,10 @@ $('.contact-btn')
             $(this).find('.bg')
                 .stop(true).animate({width: '0%'}, duration, 'easeOutQuad');
         });        
+
+
+//＞＞＞＞ fvの予約・お問合せボタン＜＜＜＜＜
+// hover時の背景を左から右の変化
 
  $('.fv-a')
         .on('mouseover', function(){
@@ -43,27 +52,20 @@ $('.contact-btn')
 
 
 
-       
-$('.fv-detail h1 span').animate({
-  left: '0%'
-},1000);
-  
 
 
 
 
+//＞＞＞＞ fvのキャッチコピー＜＜＜＜＜
+// 左からの表示
 
-
-
-
-
-
+// h1 1行目
 $('.fv-detail h1 span').eq(0).css({
   opacity: 1,
   transform: 'translateX(0px)'
 });
 
-
+// h1 2行目
 setTimeout(function(){
 $('.fv-detail h1 span').eq(1).css({
   opacity: 1,
@@ -71,9 +73,32 @@ $('.fv-detail h1 span').eq(1).css({
 });
 },500);
 
+
+
+//＞＞＞＞ fvのp(詳細)とa(予約・お問合せボタン)＜＜＜＜＜
+// h1全部終わった後、下からの表示
+
+setTimeout(function(){
+$('.fv-detail p').css({
+  opacity: 1,
+  transform: 'translateY(0px)'
+});
+},1000);
+
+setTimeout(function(){
+$('.fv-detail a').css({
+  opacity: 1,
+  transform: 'translateY(0px)'
+});
+},1100);
+
+
+//＞＞＞＞ イラスト)＜＜＜＜＜
+// fvのp(詳細)とa(予約・お問合せボタン)が終わった後、イラストを表示
+
 setTimeout(function(){
 $('.ilst').css('opacity','1');
-},2000);
+},1500);
 
 
 

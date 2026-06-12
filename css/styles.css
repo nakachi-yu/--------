@@ -356,6 +356,12 @@ header a:hover .icon-nav,header a:hover .icon-area{
     flex: 0 0 90%;
 }
 
+.fv-detail p, .fv-detail a{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s;
+}
+
 
 .ilst {
     position: absolute;
