@@ -52,6 +52,15 @@ $('.contact-btn')
 
 
 
+ $('.contact-buttun')
+        .on('mouseover', function(){
+            $(this).find('.bg')
+                .stop(true).animate({width: '100%'}, duration, 'easeOutQuad');
+        })
+        .on('mouseout', function(){
+            $(this).find('.bg')
+                .stop(true).animate({width: '0%'}, duration, 'easeOutQuad');
+        });  
 
 
 
@@ -83,14 +92,14 @@ $('.fv-detail p').css({
   opacity: 1,
   transform: 'translateY(0px)'
 });
-},1000);
+},1500);
 
 setTimeout(function(){
 $('.fv-detail a').css({
   opacity: 1,
   transform: 'translateY(0px)'
 });
-},1100);
+},1600);
 
 
 //＞＞＞＞ イラスト)＜＜＜＜＜
@@ -98,7 +107,70 @@ $('.fv-detail a').css({
 
 setTimeout(function(){
 $('.ilst').css('opacity','1');
-},1500);
+},1900);
+
+
+//＞＞＞＞サービス内容のカード＜＜＜＜＜
+// hoverで(.card-hover)詳細を表示
+
+$('.card-hover')
+  .on('mouseover', function () {
+    $(this).css('opacity','1');
+})
+  .on('mouseout', function () {
+    $(this).css('opacity','0');
+});
+
+
+
+
+//＞＞＞＞サービス内容の下の文章＜＜＜＜＜
+// 青い帯で隠してから文字を表示
+
+
+$(window).on('scroll', function () {
+    
+    let target=$('.message').offset().top;
+    let scroll=$(window).scrollTop();
+    let windowHeight=$(window).height();
+
+    if(
+      scroll>target-windowHeight+100&&
+      !$('.message').hasClass('done')
+    ){
+
+      $('.message').addClass('done');
+      $('.cover').animate({
+        width: '100%'
+      },500, 
+    
+    function(){
+      setTimeout(()=>{
+        $('.message p').css('opacity','1');
+        $(this).animate({
+          width: '0%'
+        },800);
+      },200);
+    });
+    }
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
