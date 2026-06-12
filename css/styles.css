@@ -374,10 +374,21 @@ header a:hover .icon-nav,header a:hover .icon-area{
 
 }
 
-.fv-container h1 span{
+
+
+.fv-detail h1 span{
+     color: transparent;
+     background: repeating-linear-gradient(45deg, #087ED2 0 4px, #AEE8FF 4px 6px);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+
     display: block;
-    position: relative;
-    left: -200%;
+    opacity: 0;
+    transform: translateX(-200px);
+
+    transition: all 1.5s;
 
 }
 
