@@ -134,123 +134,41 @@ $(document).ready(function () {
   });
 
 
+   $('.logo, .footer-nav a:first-child').click(function (e) {
+      $('html, body').animate({
+         scrollTop: 0 
+        }, 600); // 300ミリ秒かけて移動
+    });
+  });
+  
 
-  // ボタンをクリックした時に　<ご予約・お問合せ>　に移動
- $('a[href="#contact"]').on('click', function (e) {
+  // ボタンをクリックした時に　<選択したセクション>　に移動
+  $('a[href="#top"], a[href="#price"], a[href="#flow"], a[href="#area"], a[href="#service"], a[href="#contact"]').on('click', function (e) {
     e.preventDefault();
-    let target =$($(this).attr('href'));
+    let target = $($(this).attr('href'));
 
     $('html, body').animate({
       scrollTop: target.offset().top
     }, 1000);
-  
- });
 
-
-  // ボタンをクリックした時に　<ご予約・お問合せ>　に移動
-
-$('a[href="#service"]').on('click', function (e) {
-    e.preventDefault();
-    let target =$($(this).attr('href'));
-
-    $('html, body').animate({
-      scrollTop: target.offset().top
-    }, 1000);
-  
- });
-
-
-   // ボタンをクリックした時に　<対応エリア>　に移動
-$('a[href="#area"]').on('click', function (e) {
-    e.preventDefault();
-    let target =$($(this).attr('href'));
-
-    $('html, body').animate({
-      scrollTop: target.offset().top
-    }, 1000);
-  
- });
-
-  // ボタンをクリックした時に　<料金プラン>　に移動
-$('a[href="#price"]').on('click', function (e) {
-    e.preventDefault();
-    let target =$($(this).attr('href'));
-
-    $('html, body').animate({
-      scrollTop: target.offset().top
-    }, 1000);
-  
- });
-
-
-  // ボタンをクリックした時に　<ご利用の流れ>　に移動
-
-$('a[href="#flow"]').on('click', function (e) {
-    e.preventDefault();
-    let target =$($(this).attr('href'));
-
-    $('html, body').animate({
-      scrollTop: target.offset().top
-    }, 1000);
-  
- });
-
+  });
 
 
   // 下から上にふわっと現れる
+  $(window).scroll(function () {
+    $('.section-title, .card, .area-items, .area-img, table, .price-info, .flow-item').each(function () {
 
-  $(window)
+      var targetElement = $(this).offset().top;
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
 
+      if (scroll > targetElement - windowHeight + 150) {
+        $(this).addClass('show');
+      }
 
+    });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  });
 
 
 
@@ -302,5 +220,5 @@ $('a[href="#flow"]').on('click', function (e) {
 
 
 
-});
+
 

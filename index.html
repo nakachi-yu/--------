@@ -112,7 +112,7 @@
         </button>
 
 
-        <section class="fv">
+        <section id="top" class="fv">
 
             <div class="fv-container">
                 <div class="scroll">
@@ -308,7 +308,7 @@
         </section>
 
         <section id="area">
-            <div>
+            <div class="area-items">
 
                 <h2 class="section-title">対応エリア</h2>
 
@@ -334,10 +334,8 @@
                 <p class="area-note">
                     ※上記エリア外でも一度お問い合わせください。
                 </p>
-
-                <img src="img/area-city.png" alt="街並みイラスト">
-
             </div>
+                <img src="img/area-city.png" class="area-img" alt="">
         </section>
 
         <section id="price">
@@ -527,19 +525,19 @@
                 <!-- お名前 -->
 
                 <p><label>お名前<span>必須</span><br>
-                        <input type="text" name="name" placeholder="例：山田　花子"></label></p>
+                        <input type="text" name="name" required placeholder="例：山田　花子"></label></p>
 
 
                 <!-- メールアドレス -->
 
                 <P><label>メールアドレス<span>必須</span><br>
-                        <input type="email" name="mail" required></label></P>
+                        <input type="email" name="mail" required placeholder="例：sample@example.com"></label></P>
 
 
                 <!-- 電話番号 -->
 
                 <p><label>電話番号<span>必須</span><br>
-                        <input type="tel" name="tel"></label></p>
+                        <input type="tel" name="tel" required placeholder="090-1234-5678"></label></p>
 
                 <!-- お問い合わせ種類 -->
 
@@ -558,7 +556,7 @@
 
                 <!-- 内容 -->
                 <p><label>ご相談内容<br>
-                        <textarea name="comment"></textarea></label></p>
+                        <textarea name="comment" placeholder="気軽にお問い合わせください。"></textarea></label></p>
 
             </form>
 
@@ -589,15 +587,15 @@
 
             <a href="#">
                 <img src="img/futter-arrow.png" alt="">ホーム</a>
-            <a href="#">
+            <a href="#service">
                 <img src="img/futter-arrow.png" alt="">サービス内容</a>
-            <a href="#">
+            <a href="#area">
                 <img src="img/futter-arrow.png" alt="">対応エリア</a>
-            <a href="#">
+            <a href="#price">
                 <img src="img/futter-arrow.png" alt="">料金プラン</a>
-            <a href="#">
+            <a href="#flow">
                 <img src="img/futter-arrow.png" alt="">ご利用の流れ</a>
-            <a href="#">
+            <a href="#contact">
                 <img src="img/futter-arrow.png" alt="">ご予約・お問い合わせ</a>
             <a href="#">
                 <img src="img/futter-arrow.png" alt="">プライバシーポリシー</a>
