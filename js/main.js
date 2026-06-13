@@ -7,8 +7,9 @@ $(document).ready(function () {
   var duration = 300;
 
 
-  //＞＞＞＞ fvのスライド＜＜＜＜＜
-  // スライドショー
+  // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+  // ファーストブューのslickスライドショー
+  // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
   $('.slideshoe').slick({
     dots: false,  // 矢印非表示
@@ -22,6 +23,10 @@ $(document).ready(function () {
     pauseOnHover: false // マウス乗せても止まらない
   });
 
+
+  // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+  // 予約・お問合せボタンのホバー処理
+  // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
   //＞＞＞＞ header　navの予約・お問合せボタン＜＜＜＜＜
   // hover時の背景を左から右の変化
@@ -51,6 +56,8 @@ $(document).ready(function () {
     });
 
 
+  //＞＞＞＞ footerの予約・お問合せボタン＜＜＜＜＜
+  // hover時の背景を左から右の変化
 
   $('.contact-buttun')
     .on('mouseover', function () {
@@ -64,9 +71,13 @@ $(document).ready(function () {
 
 
 
+  // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+  // キャッチコピーの起動処理
+  // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
   //＞＞＞＞ fvのキャッチコピー＜＜＜＜＜
   // 左からの表示
+
 
   // h1 1行目
   $('.fv-detail h1 span').eq(0).css({
@@ -83,9 +94,8 @@ $(document).ready(function () {
   }, 500);
 
 
-
-  //＞＞＞＞ fvのp(詳細)とa(予約・お問合せボタン)＜＜＜＜＜
-  // h1全部終わった後、下からの表示
+  //＞＞＞＞ fvのp(詳細)＜＜＜＜＜
+  // 下からの表示
 
   setTimeout(function () {
     $('.fv-detail p').css({
@@ -93,6 +103,10 @@ $(document).ready(function () {
       transform: 'translateY(0px)'
     });
   }, 1500);
+
+
+  //＞＞＞＞ fvのa(予約・お問合せボタン)＜＜＜＜＜
+  // 下からの表示
 
   setTimeout(function () {
     $('.fv-detail a').css({
@@ -102,16 +116,28 @@ $(document).ready(function () {
   }, 1600);
 
 
+
   //＞＞＞＞ イラスト)＜＜＜＜＜
-  // fvのp(詳細)とa(予約・お問合せボタン)が終わった後、イラストを表示
+  //opcity0→1でイラストを表示
 
   setTimeout(function () {
     $('.ilst').css('opacity', '1');
   }, 1900);
 
 
+
+
+  // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+  // フィードインアニメーション
+  // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
   //＞＞＞＞ TOPへスクロール＜＜＜＜＜
   // fv.より下に行くとTOPへスクロールボタンが表示される
+
+
+  // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+  // フィードインアニメーション　（TOPボタン）
+  // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
   $(function () {
     const $toTopButton = $('#js-button-top');
@@ -126,7 +152,14 @@ $(document).ready(function () {
       }
     });
 
-    // ボタンをクリックした時にページ上部へスムーズに戻る
+
+
+  // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+  // スムーススクロール
+  // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+  // TOPボタンをクリックした時にページ上部へスムーズに移動
+
     $toTopButton.click(function (e) {
       e.preventDefault();
       $('html, body').animate({ scrollTop: 0 }, 300); // 300ミリ秒かけて移動
@@ -134,15 +167,17 @@ $(document).ready(function () {
   });
 
 
-   $('.logo, .footer-nav a:first-child').click(function (e) {
-      $('html, body').animate({
-         scrollTop: 0 
-        }, 600); // 300ミリ秒かけて移動
-    });
-  
-  
+  // logoボタンとfooter-navをクリックした時にページ上部へスムーズに移動
 
-  // ボタンをクリックした時に　<選択したセクション>　に移動
+  $('.logo, .footer-nav a:first-child').click(function (e) {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 600); // 300ミリ秒かけて移動
+  });
+
+
+  // navボタンをクリックした時に　<選択したセクション>　に移動
+
   $('a[href="#top"], a[href="#price"], a[href="#flow"], a[href="#area"], a[href="#service"], a[href="#contact"]').on('click', function (e) {
     e.preventDefault();
     let target = $($(this).attr('href'));
@@ -153,10 +188,14 @@ $(document).ready(function () {
 
   });
 
-  
 
+
+  // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+  // フィードインアニメーション   （全体のセクションごと）
+  // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
   // 下から上にふわっと現れる
+
   $(window).scroll(function () {
     $('.section-title, .card, .area-items, .area-img, table, .price-info, .flow-item').each(function () {
 
@@ -174,7 +213,10 @@ $(document).ready(function () {
 
 
 
-  //＞＞＞＞サービス内容のカード＜＜＜＜＜
+  // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+  // サービスカードのホバー処理
+  // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
   // hoverで(.card-hover)詳細を表示
 
   $('.card-hover')
@@ -187,10 +229,11 @@ $(document).ready(function () {
 
 
 
+  // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+  // サービス追加テキストのホバー処理
+  // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-  //＞＞＞＞サービス内容の下の文章＜＜＜＜＜
   // 青い帯で隠してから文字を表示
-
 
   $(window).on('scroll', function () {
 
@@ -220,4 +263,4 @@ $(document).ready(function () {
 
   });
 
-  });
+});
