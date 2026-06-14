@@ -121,7 +121,7 @@ $(document).ready(function () {
   //opcity0→1でイラストを表示
 
   setTimeout(function () {
-    $('.ilst').css('opacity', '1');
+    $('.fv-illust').css('opacity', '1');
   }, 1900);
 
 
@@ -247,7 +247,7 @@ $(document).ready(function () {
     ) {
 
       $('.message').addClass('done');
-      $('.cover').animate({
+      $('.message-cover').animate({
         width: '100%'
       }, 500,
 

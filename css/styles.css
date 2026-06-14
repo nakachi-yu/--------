@@ -1,4 +1,8 @@
-/*--- 共通----*/
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+/* ----共通---- */
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+/* リセットCSS */
 * {
     margin: 0;
     padding: 0;
@@ -6,51 +10,63 @@
 }
 
 body {
+    /* 文字 */
     /* font-family: 'Kiwi Maru', serif; */
     font-family: 'Noto Sans JP', sans-serif;
-    align-items: center;
+
+    /* 余白 */
     margin-top: 100px;
 }
 
-
 a {
+    /* 文字 */
     color: black;
     text-decoration: none;
+
+    /* Flex/Grid */
     display: block;
 }
 
 img {
+    /* サイズ */
     max-width: 100%;
 }
 
-.section-title{
+.section-title {
+    /* 文字 */
     font-size: 40px;
     text-align: center;
+
+    /* 余白 */
     margin-bottom: 56px;
 
+    /* Flex/Grid */
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
 
+    /* アニメーション （Javascriptで下から表示）（表示前）*/
     opacity: 0;
     transform: translate(0, 80px);
     transition: all 1s ease;
 }
 
-.section-title.show{
+.section-title.show {
+    /* アニメーション （Javascriptで下から表示）（表示後）*/
     opacity: 1;
     transform: translate(0, 0px);
 }
 
 
 section:not(.fv) {
+    /* 余白 */
     padding-block: clamp(56px, 8vw, 96px);
 }
 
-/* bodyでの共通の色（スプライト柄） */
 h1,
 h2 {
+    /* 文字　共通の色（スプライト柄） */
     color: transparent;
     background: repeating-linear-gradient(45deg, #087ED2 0 4px, #AEE8FF 4px 6px);
     -webkit-background-clip: text;
@@ -58,70 +74,97 @@ h2 {
 }
 
 .section-title::before {
+    /* 配置 */
     content: "";
+
+    /* サイズ */
     width: 6px;
     height: 60px;
+
+    /* 見た目 */
     background-color: #007DAF;
     border-radius: 1px;
 }
 
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+/* ----TOPへ戻るボタン---- */
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
 
-/* TOPへ戻るボタン */
-.button-top{
+.button-top {
+    /* 見た目 */
     background-color: #2A5596;
+    border-color: transparent;
+    border-radius: 50px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, .2);
+
+    /* 余白 */
+    padding: 10px 13px;
+
+    /* 配置 */
     position: fixed;
-    z-index: 1;
     right: 10px;
     bottom: 10px;
+    z-index: 999;
+
+    /* 文字 */
     color: #fff;
-    border-radius: 50px;
+    font-size: 32px;
+
+    /* Flex/Grid */
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 32px;
-    border-color: transparent;
-    padding: 10px 13px;
     gap: 5px;
 
-     box-shadow: 0px 8px 20px rgba(0, 0, 0, .2);
-
-     opacity: 0;
+    /* アニメーション （Javascriptで下から表示）（表示前）*/
+    opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    z-index: 9999;
-}
-
-.button-top:hover{
-    transform: translateY(-10px);
-    transition: all 0.2s ease;
 }
 
 /* TOPへ戻るボタンの矢印 */
 .button-top img {
+    /* サイズ */
     width: 25px;
 }
 
+.button-top:hover {
+    /* アニメーション （Javascriptで下から表示）（表示後）*/
+    transform: translateY(-10px);
+    transition: all 0.2s ease;
+}
+
 .button-top.show {
+    /* アニメーション （Javascriptで下から表示）（表示後）*/
     opacity: 1;
     visibility: visible;
 }
 
 
-/* ---ヘッダー--- */
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+/* ----ヘッダー---- */
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
 
 /* ヘッダー全体（レイアウト、サイズや色と線と影、上表示） */
 header {
+    /* Flex/Grid */
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    /* 文字 */
     font-weight: bold;
 
+    /* サイズ */
     height: 100px;
     width: 100%;
+
+    /* 見た目 */
     background-color: #ffffff;
     border-bottom: 1px solid #e4e4e4;
     box-shadow: 0px 4px 4px rgba(143, 143, 143, 0.1);
 
+    /* 配置 */
     position: fixed;
     z-index: 1000;
     top: 0;
@@ -130,186 +173,244 @@ header {
 
 /* ロゴ */
 .logo {
+    /* サイズ */
     width: 90px;
     height: 90px;
+
+    /* 余白 */
     padding: 5px 5px 0 10px;
+
+    /* 縮まらない設定 */
     flex-shrink: 0;
 }
 
 
-/* （ヘッダーのナビ全体） */
+/* ヘッダーのナビ全体 */
 header nav {
+    /* Flex/Grid */
     display: flex;
-    list-style: none;
     justify-content: center;
     align-items: center;
-   
-     height: 100%;
-}
 
-header nav img {
-    width: clamp(18px, 1.5vw, 21px);
-    height: clamp(18px, 1.5vw, 21px);
+    /* サイズ */
+    height: 100%;
 }
 
 header ul {
+    /* Flex/Grid */
     display: flex;
     justify-content: center;
     align-items: center;
+
+    /* 見た目 */
     list-style: none;
-    
+
+    /* サイズ */
     flex-wrap: nowrap;
     height: 100%;
 }
 
 header li {
-    white-space: nowrap;
+    /* Flex/Grid */
     display: block;
     justify-content: space-around;
     align-items: center;
-    font-size: clamp(10px, 1.5vw, 21px);
-    height: 100%;
 
+    /* 折り返しなし設定 */
+    white-space: nowrap;
+
+    /* 文字 */
+    font-size: clamp(10px, 1.5vw, 21px);
+
+    /* サイズ */
+    height: 100%;
 }
 
-
 /* ヘッダーのナビ文字 */
-header a:not(.contact-btn){
+header a:not(.contact-btn) {
+    /* Flex/Grid */
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-inline: 10px;
     gap: 5px;
+
+    /* 余白 */
+    padding-inline: 10px;
+
+    /* サイズ */
     height: 100%;
-    
 }
 
-header nav a:not(.contact-btn):hover{
+/* ホバー時の背景と文字色*/
+header nav a:not(.contact-btn):hover {
+    /* 見た目 */
     background-color: #1856A2;
+
+    /* 文字 */
     color: #fff;
 }
 
-header nav a:hover .icon-nav,header a:hover .icon-area{
+/* ホバー時のナビのアイコンと予約ボタンのアイコン */
+header nav a:hover .icon-nav,
+header a:hover .icon-area {
+    /* 文字 */
     color: #fff;
 }
 
-.icon-nav, .icon-area{
+/* ナビのアイコン */
+.icon-nav,
+.icon-area {
+    /* サイズ */
     width: clamp(18px, 3vw, 35px);
     height: clamp(18px, 3vw, 35px);
+
+    /* 文字 */
     color: #007DAF;
-    
 }
 
-.icon-nav path{
+.icon-nav path {
+    /* パスの太さ */
     stroke-width: 4;
 }
 
-.icon-area path{
+.icon-area path {
+    /* パスの太さ */
     stroke-width: 2;
 }
 
 
-
-
-
-/* ヘッダーのナビ部分の予約アイコン */
+/* ヘッダーのナビ部分の予約文字と見た目 */
 .contact-btn {
+    /* 見た目 */
     background-color: #F9833F;
-    color: #ffffff;
-    font-size: clamp(10px, 1.5vw, 21px);
-    padding: 10px 20px;
-    margin-right: 5px;
     border-radius: 10px;
 
+    /* 文字 */
+    color: #ffffff;
+    font-size: clamp(10px, 1.5vw, 21px);
+
+    /* 余白 */
+    padding: 10px 20px;
+    margin-right: 5px;
+
+    /* Flex/Grid */
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
+
+    /* 折り返しなし設定 */
     white-space: nowrap;
 
+    /* アニメーション */
     position: relative;
     overflow: hidden;
     z-index: 1;
 }
 
-.contact-btn svg{
+/* ヘッダーのナビ部分の予約アイコン */
+.contact-btn svg {
+    /* サイズ */
     width: clamp(18px, 2vw, 35px);
-    
+
 }
 
-/* .contact-btn, .contact-btn svg{
-    z-index: 1;
-} */
-
-.bg{
+/* ホバー時のアニメーション */
+.bg {
+    /* 見た目 */
     background-color: #087ED2;
-    top: 0;
-    left: 0;
+
+    /* サイズ */
     width: 0%;
     height: 100%;
-    
+
+    /* 配置 */
     position: absolute;
+    top: 0;
+    left: 0;
     z-index: -1;
-    
 }
 
 
-
-
-
-
-/* ----ファーストビュー--- */
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+/* ----ファーストビュー（左側）---- */
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
 
 /* --------スクロールアニメーションーーーーー */
 
 /* スクロールダウンの位置 */
 .scroll {
-    /* position: absolute;
-  left: 5%;
-  bottom: 30%; */
-    writing-mode: vertical-rl;
+    /* 文字 */
     color: #2A5596;
     font-weight: bold;
-    flex: 0 0 10%;
+    writing-mode: vertical-rl;
+    /* （縦書き） */
+
+
+    /* Flex/Grid */
     display: flex;
     justify-content: center;
     align-items: center;
     align-self: flex-end;
+    /* （親要素がflexの時にこの子要素だけ配置を変える） */
+    flex-grow: 0;
+    /* （広がらない） */
+    flex-shrink: 0;
+    /* （縮まらない ）*/
+    flex-basis: 10%;
+    /* （親要素の10％配置） */
+
+    /* 配置 */
     position: relative;
+
+    /* 余白 */
     margin-bottom: 150px;
-
-}
-
-.scroll:hover{
-    opacity: 0.5;
 }
 
 /* 線のアニメーション部分 */
 .scroll::before {
-    animation: scroll 2s infinite;
+    /* 見た目 */
     background-color: #2A5596;
-    top: 100%;
-    content: "";
+
+    /* サイズ */
     height: 100px;
-    left: 0;
+    width: 2px;
+
+    /* 余白 */
     margin: auto;
+
+    /* 配置 */
+    content: "";
     position: absolute;
     right: 0;
-    width: 1px;
+    left: 0;
     z-index: 2;
+    top: 100%;
+
+    /* アニメーション */
+    animation: scroll 2s infinite;
 }
 
 /* 線の背景色 */
 .scroll::after {
+    /* 見た目 */
     background-color: #ccc;
-    top: 100%;
-    content: "";
+
+    /* サイズ */
+    width: 1px;
     height: 100px;
-    left: 0;
+
+    /* 余白 */
     margin: auto;
+
+    /* 配置 */
+    top: 100%;
+    /* （文字の真下に配置するため） */
     position: absolute;
     right: 0;
-    width: 1px;
+    left: 0;
+    content: "";
+
 }
 
 /* 線のアニメーション */
@@ -324,6 +425,7 @@ header nav a:hover .icon-nav,header a:hover .icon-area{
         transform-origin: 0 0;
     }
 
+    /* ↓ここで左下の支点に変更により下からでる*/
     51% {
         transform: scale(1, 1);
         transform-origin: 0 100%;
@@ -338,255 +440,325 @@ header nav a:hover .icon-nav,header a:hover .icon-area{
 
 /* ファーストビューの全体（文字と写真を横並びにした） */
 .fv {
+    /* サイズ */
     width: 100%;
     min-height: clamp(500px, 70vw, 900px);
-    ;
+
+    /* 余白 */
     margin: 0 auto;
+
+    /* Flex/Grid */
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    position: relative;
 
+    /* 配置 */
+    position: relative;
 }
 
-.fv::after {
+
+スクロールの位置 .fv::after {
+    /* サイズ */
+    width: 150px;
+
+    /* 配置 */
     content: "";
     position: absolute;
     z-index: -1;
     top: 0;
     left: 4%;
-    transform: translateX(-50%);
-    width: 150px;
-    /* グラデーション幅 */
-    height: 100%;
-    background: linear-gradient(to left,
-            transparent 0%,
-            rgba(255, 255, 255, 1) 100%,
-            transparent);
-    pointer-events: none;
 }
+
 
 /* キャッチコピー（左範囲） */
 .fv-container {
+    /* サイズ */
     width: 50%;
+
+    /* 文字 */
+    min-height: 100v;
+
+    /* 余白 */
+    margin-top: 56px;
+
+    /* Flex/Grid */
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-top: 56px;
-    min-height: 100v;
 }
 
-
+/* キャッチコピー（左範囲の中身） */
 .fv-detail {
+    /* 文字 */
     text-align: left;
+
+    /* 配置 */
     position: relative;
+
+    /* Flex/Grid */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
     align-items: stretch;
+    gap: 10px;
     flex: 0 0 90%;
 }
 
-.fv-detail p, .fv-detail a{
+/* ファーストブュー文章と予約ボタン */
+.fv-detail p,
+.fv-detail a {
+    /* アニメーション　（Javascriptで下から表示） */
     opacity: 0;
     transform: translateY(50px);
     transition: all 1s;
 }
 
-
-.ilst {
+/* ファーストブューのイラスト */
+.fv-illust {
+    /* 配置 */
     position: absolute;
     z-index: -3;
     bottom: 20px;
     right: -10px;
+
+    /* サイズ */
     width: clamp(220px, 20vw, 340px);
+
+    /* アニメーション （Javascriptで表示）*/
     opacity: 0;
     transition: opacity 1s;
-
 }
 
-/* キャッチコピー（文字サイズ、下余白） */
+/* キャッチコピー*/
 .fv-container h1 {
+    /* サイズ */
     font-size: clamp(32px, 5vw, 80px);
     white-space: nowrap;
-    margin-bottom: 20px;
 
+    /* 余白 */
+    margin-bottom: 20px;
 }
 
 
 
-.fv-detail h1 span{
-     color: transparent;
-     background: repeating-linear-gradient(45deg, #087ED2 0 4px, #AEE8FF 4px 6px);
+.fv-detail h1 span {
+    /* 文字（スプライト柄） */
+    color: transparent;
+    background: repeating-linear-gradient(45deg, #087ED2 0 4px, #AEE8FF 4px 6px);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 
-
+    /* Flex/Grid */
     display: block;
+
+    /* アニメーション （Javascriptで下から表示）*/
     opacity: 0;
     transform: translateX(-200px);
-
     transition: all 1.5s;
-    
-
 }
+
 
 /* fvの詳細（文字サイズ） */
 .fv-container p {
+    /* 文字 */
     font-size: clamp(16px, 2vw, 24px);
+
+    /* サイズ */
     max-width: clamp(350px, 25vw, 500px);
+
+    /* 余白 */
     margin-bottom: 56px;
-    
 }
 
 
 /* fvのボタン（レイアウト、文字設定） */
-.fv-a{
+.fv-a {
+    /* サイズ */
     width: clamp(300px, 30vw, 350px);
     max-height: 50px;
+
+    /* 文字 */
     font-size: clamp(24px, 2vw, 32px);
     background-color: #F9833F;
     color: #FFF8E8;
     font-weight: 500;
+
+    /* 見た目 */
     border-color: transparent;
     border-radius: 10px;
+
+    /* 余白 */
     padding: 30px 15px;
     padding-block: clamp(10px, 3vw, 30px);
     padding-inline: clamp(10px, 3vw, 15px);
 
-    gap: 10px;
-
+    /* Flex/Grid */
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+
+    /* 配置 */
     position: relative;
     overflow: hidden;
-}
 
-.fv-a{
-    transition: all .3s ease;
+    /* アニメーション （ホバー前）*/
     box-shadow: 0px 4px 12px rgba(0, 0, 0, .15);
+    transition: all .3s ease;
 }
 
-.fv-a:hover{
+.fv-a:hover {
+    /* アニメーション （ホバー後）*/
     box-shadow: 0px 8px 20px rgba(0, 0, 0, .2);
     transform: translateY(-5px);
 }
 
 
-
-.fv-a svg, .btn-text{
+/* fvのお問い合わせボタン */
+.fv-a svg,
+.btn-text {
+    /* 配置 */
     position: relative;
     z-index: 2;
 }
 
-.fv-a .bg{
+/* fvのお問い合わせボタンの移動ホバー背景*/
+.fv-a .bg {
+    /* サイズ */
+    width: 0;
+    height: 100%;
+
+    /* 配置 */
     position: absolute;
     left: 0;
     top: 0;
-    width: 0;
-    height: 100%;
     z-index: 1;
 }
 
 
-
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+/* ----ファーストビュー（右側｛スライドショー｝）---- */
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
 
 /* 写真サイズ */
 .slideshoe {
+    /* サイズ */
     width: 50%;
+
+    /* Flex/Grid */
     display: flex;
     align-items: stretch;
 }
 
 .slideshoe div {
+    /* サイズ */
     height: 100%;
 }
 
 .slideshoe img {
+    /* サイズ */
     width: 100%;
-
     height: 100%;
     object-fit: cover;
+    /* （枠いっぱいに表示する※写真サイズと枠サイズが異なる時に表示｛塗りみたいなもん｝） */
+
+     /* Flex/Grid */
     display: block;
 }
 
 
-/* ---ご利用にあたって--- */
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+/* ----ご利用にあたって---- */
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
 
-
-/* ご利用についての全体（中央に寄せた） */
+/* ご利用についての全体*/
 .container-notice {
+    /* 余白 */
     margin: 0 auto;
-    background-color: #faf8f5;
     padding: 56px;
+
+    /* 見た目 */
+    background-color: #faf8f5;
 }
 
 /* ご利用についての赤い外枠 */
 .notice-wrap {
+    /* サイズ */
     max-width: 1130px;
-    padding: 40px 0px;
     border-radius: 8px;
     border: 4px dotted #BD373A;
-    padding: 56px 28px;
-    margin: 0 auto;
     background-color: #fff;
 
-
+    /* 余白 */
+    padding: 56px 28px;
+    margin: 0 auto;
 }
 
 /* ご利用についてのタイトル */
 .notice-wrap h2 {
+    /* 余白 */
     margin-bottom: 32px;
-    font-size: 28px;
     margin-top: 0px;
+
+    /* 文字 */
+    font-size: 28px;
     color: black;
     text-align: center;
 }
 
 /* ご利用についての箇条書き */
 .notice-wrap ul {
+    /* Flex/Grid */
     display: grid;
     grid-template-columns: repeat(2, auto);
-    justify-content: center;
     gap: 10px 50px;
+
+    /* 文字 */
     flex-wrap: wrap;
-    justify-items: start;
-    margin: 0 auto;
+
+    /* サイズ */
     width: fit-content;
+    
+    /* 余白 */
+    margin: 0 auto;
     padding-left: 40px;
 }
 
-/* ご利用についての箇条書き */
 .notice-wrap li {
+    /* 文字 */
     font-size: 16px;
+
+    /* サイズ */
     max-width: 550px;
 }
 
-/* -------------サービス内容---- */
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+/* ----サービス内容---- */
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
 
-
-/* タイトル以外のカード全て */
+/* カード全て */
 .service-list {
+     /* Flex/Grid */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
-
 }
 
 /* 青いカードと黒文字詳細をまとめたもの　*/
 .card {
+    /* サイズ */
     width: 198px;
-
+    
+    /* アニメーション （Javascriptで下から表示）*/
     opacity: 0;
     transform: translate(0, 80px);
     transition: all 1s ease;
 }
 
-.card.show{
+.card.show {
+    /* アニメーション （Javascriptで下から表示）*/
     opacity: 1;
     transform: translate(0, 0px);
 }
@@ -594,6 +766,7 @@ header nav a:hover .icon-nav,header a:hover .icon-area{
 
 /* 青いカードの下にある黒文字詳細 （箇条書き全体）*/
 .card ul {
+    /* 余白 */
     margin: 0;
     padding-left: 20px;
 }
@@ -601,226 +774,284 @@ header nav a:hover .icon-nav,header a:hover .icon-area{
 
 /* 青いカードの下にある黒文字詳細 （箇条書き）*/
 .card li {
+    /* 文字 */
     font-size: 16px;
 }
 
 
 /* 青いカード */
 .card-top {
+    /* 見た目 */
     background-color: #E4F0FF;
+    border-radius: 10px;
+
+    /* サイズ */
     width: 198px;
     height: 203px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
+
+    /* 余白 */
     margin-bottom: 32px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
+    /* Flex/Grid */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    /* 配置 */
     position: relative;
 }
 
+/* ーーーーーーーーーーーーーーーーーー */
+/* ----（ホバー時）青いカード-始め--- */
+/* ーーーーーーーーーーーーーーーーーー */
 
-
-/* :hover */
-
-.card-hover{
-    position: absolute;
+/* 青いカードの全体 */
+.card-hover {
+    /* 見た目 */
     background-color: #1856A2;
-    width: 100%;
-    height: 100%;
     border-radius: 10px;
 
+    /* サイズ */
+    width: 100%;
+    height: 100%;
+    
+    /* Flex/Grid */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+    /* 余白 */
     padding-inline: 10px;
 
+    /* 配置 */
+     position: absolute;
+
+    /* アニメーション */
     opacity: 0;
     transition: opacity 0.4s ease;
 }
 
-.card-hover div{
+/* 横線と下の文字 */
+.card-hover div {
+    /* サイズ */
     width: 100%;
+
+    /* 文字 */
     text-align: center;
+
+    /* 余白 */
     margin-bottom: 10px;
 }
 
-.card-hover p{
+/* 上部の詳細 */
+.card-hover p {
+    /* 余白 */
     margin-top: 10px;
-}
 
-
-.card-hover p,.sen{
+     /* 文字 */
     color: #fff;
     text-align: center;
 }
 
-.sen{
+/* 横線 */
+.sen {
+    /* 見た目 */
     background-color: #FFF;
+
+    /* サイズ */
     height: 2px;
-    align-content: center;
+
+    /* 余白 */
     margin-bottom: 10px;
-    
 }
 
-.card-hover span{
+/* 下の文字 */
+.card-hover span {
+    /* 文字 */
     font-size: 18px;
     color: #FFF;
 }
 
+/* ーーーーーーーーーーーーーーーーーー */
+/* ----（ホバー時）青いカード-終わり--- */
+/* ーーーーーーーーーーーーーーーーーー */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* あなたのニーズに合わせて自由にカスタマイズ可能 */
+/* あなたのニーズに合わせて自由にカスタマイズ可能の全体 */
 .message {
+    /* Flex/Grid */
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
-    
 
+    /* 文字 */
+    font-weight: bold;
+
+    /* サイズ */
     max-width: 750px;
     max-height: 50px;
+
+    /* 余白 */
     margin: 56px auto;
     padding-inline: 20px;
 
+    /* 配置 */
     position: relative;
-    
-
 }
 
+/* 文章 */
 .message p{
-    opacity: 0;
+    /* 見た目 */
     border-bottom: 3px solid #007DAF;
-    white-space: nowrap;
-    width: fit-content;
+
+    /* 文字 */
     font-size: clamp(16px, 4vw, 32px);
+    white-space: nowrap;
+
+    /* サイズ */
+    width: fit-content;
+
+    /* アニメーション */
+    opacity: 0;
 }
 
-.cover{
-    position: absolute;
+.message-cover {
+    /* 見た目 */
     background-color: #1856A2;
+    
+    /* サイズ */
     width: 0%;
     height: 100%;
+
+    /* 配置 */
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 2;
 }
 
 
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+/* ----対応エリア---- */
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
 
-/* ---対応エリア--- */
-
-.area-items{
+.area-items {
+    /* アニメーション　（Javascriptで下から表示） */
     opacity: 0;
     transform: translate(0, 80px);
     transition: all 1s ease;
 }
 
-.area-items.show{
+.area-items.show {
+    /* アニメーション　（Javascriptで下から表示） */
     opacity: 1;
     transform: translate(0, 0px);
 }
 
-.area-img{
+/* 町のイラスト */
+.area-img {
+    /* サイズ */
+    width: 100%;
+    max-width: 900px;
+
+    /* 余白 */
+    margin: 0 auto;
+
+    /* Flex/Grid */
+    display: block;
+
+    /* アニメーション　（Javascriptで下から表示） */
     opacity: 0;
     transform: translate(0, 80px);
-    transition: all 1s ease;
+    transition: all 1s ease
 }
 
-.area-img.show{
+.area-img.show {
+    /* アニメーション　（Javascriptで下から表示） */
     opacity: 1;
     transform: translate(0, 0px);
 }
 
 /* 地域リスト */
 .area-list {
+    /* 文字 */
     font-size: 32px;
+
+    /* 余白 */
     margin: 0 auto;
+
+    /* サイズ */
     width: 480px;
 }
 
 /* 角丸の水色　江戸川区　浦安市　市川市 */
 .area-list li {
+    /* 見た目 */
     background-color: #9FD8EF;
-    padding: 10px 20px;
     border-radius: 30px;
-    margin: 10px 0px;
-    width: 168px;
+
+    /* 文字 */
     text-align: center;
+
+    /* サイズ */
+    width: 168px;
+
+    /* 余白 */
+    padding: 10px 20px;
+    margin: 10px 0px;
 }
 
 /* 東京と千葉の列 */
 .area-row {
+    /* 見た目 */
     border-bottom: 3px solid #2A5596;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: flex-start;
 
+    /* Flex/Grid */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
 }
 
 /* 東京都と千葉の文字 */
 .prefecture {
+    /* サイズ */
     min-width: 100px;
-}
-
-/* （家のイラスト） */
-.area-img {
-    width: 100%;
-    max-width: 900px;
-    display: block;
-    margin: 0 auto;
-
-
 }
 
 /* 江戸川区、浦安市と市川市のul */
 .city-list {
+    /* 見た目*/
     list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+
+    /* 余白 */
     padding: 0;
     margin: 0;
 
+    /* Flex/Grid */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
-
 
 /* 下の※印 */
 .area-note {
+    /* 文字 */
     font-size: 16px;
     text-align: center;
+
+    /* 余白 */
     margin-bottom: 15px;
 }
 
 
-
-/* ↓---料金プラン--- */
-
-/* 料金プランのアイコン */
-
-
-
-
-table{
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+/* ----料金プラン---- */
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+table {
     margin: 32px auto;
     border-collapse: collapse;
     border-spacing: 0;
@@ -833,7 +1064,7 @@ table{
     transition: all 1s ease;
 }
 
-table.show{
+table.show {
     opacity: 1;
     transform: translate(0, 0px);
 }
@@ -1032,7 +1263,7 @@ tbody tr:last-child td:last-child {
     transition: all 1s ease;
 }
 
-.price-info.show{
+.price-info.show {
     opacity: 1;
     transform: translate(0, 0px);
 }
@@ -1053,10 +1284,11 @@ tbody tr:last-child td:last-child {
 
 
 
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+/* ----ご利用の流れ---- */
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
 
-/* ---ご利用の流れ--- */
-/* 
-（タイトル以外の下の詳細） */
+/* （タイトル以外の下の詳細） */
 .flow-list {
     display: flex;
     justify-content: center;
@@ -1091,7 +1323,7 @@ tbody tr:last-child td:last-child {
     transition: all 1s ease;
 }
 
-.flow-item.show{
+.flow-item.show {
     opacity: 1;
     transform: translate(0, 0px);
 }
@@ -1148,182 +1380,274 @@ tbody tr:last-child td:last-child {
 
 /* (お問合せからサービス開始までの流れのタイトル部分) */
 .flow-card h3 {
+    /* 文字 */
     font-size: 24px;
     margin: 10px 0;
 }
 
-/* ---お問い合わせ ---*/
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+/* ----お問い合わせ--↓↓↓↓ */
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
 
-/* フッターコンテンツの全体 */
+/* お問い合わせの全体 */
 #contact {
+    /* Flex/Grid */
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    /* 余白 */
     padding-block: 56px;
+
+    /* 見た目 */
     background-color: #9FD8EF;
 }
 
+/* フッターコンテンツのお問合せの文字 */
+#contact h2 {
+    /* 文字 */
+    font-size: 40px;
+    color: black;
 
-
-
-form span {
-    background-color: #F9833F;
-    color: #fff;
-    padding-inline: 5px;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-form p {
-    font-size: 32px;
-    font-weight: bold;
+    /* 余白 */
     margin-bottom: 32px;
 }
 
+/* フォームの必須 */
 form span {
+    /* 見た目 */
+    background-color: #F9833F;
+    border-radius: 5px;
+
+    /* 文字 */
+    color: #fff;
+    font-size: 16px;
+
+    /* 余白 */
     margin-left: 10px;
+    padding-inline: 5px;
 }
 
+/* フォームの項目文字 */
+form p{
+    /* 文字 */
+    font-size: 32px;
+    font-weight: bold;
+
+    /* 余白 */
+    margin-bottom: 32px;
+}
+
+/* ーーーーーーーーーーーーーーーーーー */
+/* ----ラジオボックス-始め-↓↓↓↓- */
+/* ーーーーーーーーーーーーーーーーーー */
+
+/* ラジオボックスの丸*/
 input[type="radio"] {
+    /* 丸のサイズ */
     transform: scale(1.6);
+
+    /* 余白 */
     margin-right: 5px;
 }
 
+/* ラジオボックスの文字*/
 .contact-font {
+    /* 文字 */
     font-size: clamp(16px, 2vw, 24px);
+
+    /* 余白 */
     margin-right: 32px;
 }
+/* ーーーーーーーーーーーーーーーーーー */
+/* ----ラジオボックス-終わり--- */
+/* ーーーーーーーーーーーーーーーーーー */
 
 
+/* 長方形の入力ボックス */
 input:not(input[type="radio"]):not(input[type="submit"]) {
-    padding: 0 10px;
+    /* サイズ */
     width: 100%;
     min-width: 500px;
     height: 40px;
+
+    /* 余白 */
+    padding: 0 10px;
+
+    /* 文字 */
     line-height: 40px;
     font-size: 16px;
 }
 
+/* ご相談内容 */
 textarea {
-    padding: 0 10px;
+    /* サイズ */
     width: 100%;
     min-width: 500px;
     height: 100px;
-    line-height: 1.5;
+    
+    /* 余白 */
+    padding: 0 10px;
+
+    /* 文字 */
     font-size: 16px;
+    line-height: 1.5;
 }
 
+/* 全項目の入力欄の例文 */
 textarea::placeholder,
 input::placeholder {
+    /* 文字 */
     font-size: 16px;
 }
 
+/* ーーーーーーーーーーーーーーーーーー */
+/* ----お問い合わせの送信ボタン-始め↓↓↓↓ */
+/* ーーーーーーーーーーーーーーーーーー */
 input[type="submit"] {
-    color: #fff;
+    /* 見た目 */
     background-color: transparent;
-    font-size: 24px;
-    border-color: transparent;
     text-align: center;
+
+    /* 文字 */
+    color: #fff;
+    font-size: 24px;
+
+    /* サイズ */
     width: 500px;
     height: 50px;
+
+    /* Flex/Grid */
     display: block;
     margin: 0 auto;
-    
 
+    /* 配置 */
     position: relative;
     z-index: 2;
-
 }
 
-.contact-buttun{
-    position: relative;
-    overflow: hidden;
+.contact-buttun {
+    /* 見た目 */
     background-color: #F9833F;
-
-    transition: all .3s ease;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, .15);
     border-radius: 50px;
+
+    /* 配置 */
+    position: relative;
+    overflow: hidden;
+
+    /* アニメーション　（Javascriptで下から表示） */
+    transition: all .3s ease;
 }
 
-.contact-buttun:hover{
+.contact-buttun:hover {
+    /* アニメーション　（Javascriptで下から表示） */
     box-shadow: 0px 8px 20px rgba(0, 0, 0, .2);
     transform: translateY(-3px);
 }
 
-.contact-buttun .bg{
+.contact-buttun .bg {
+    /* 配置 */
     position: absolute;
     left: 0;
     top: 0;
+    z-index: 1;
+
+    /* サイズ */
     width: 0;
     height: 100%;
-    z-index: 1;
 }
 
-
-/* フッターコンテンツのお問合せの文字 */
-#contact h2 {
-    font-size: 40px;
-    color: black;
-    margin-bottom: 32px;
-}
+/* ーーーーーーーーーーーーーーーーーー */
+/* ----お問い合わせの送信ボタン-終わり--- */
+/* ーーーーーーーーーーーーーーーーーー */
 
 
-/* フッターコンテンツのアイコン */
+
+/* ーーーーーーーーーーーーーーーーーー */
+/* ----時間、電話番号、定休日-始め↓↓↓ */
+/* ーーーーーーーーーーーーーーーーーー */
+
+/* 時間、電話番号、定休日のimg */
 #contact img {
+    /* サイズ */
     width: 30px;
 }
 
-
+/* 時間、電話番号、定休日のul */
 #contact ul {
+    /* 余白 */
+    margin-bottom: 32px;
+
+    /* Flex/Grid */
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-bottom: 32px;
+    
 }
 
 /* 時間、電話番号、定休日のli */
 #contact li {
+    /* 文字 */
     list-style-type: none;
     font-size: 24px;
     font-weight: 500;
+
+    /* 余白 */
+    margin-bottom: 10px;
+
+    /* Flex/Grid */
     display: flex;
     align-items: center;
     gap: 5px;
-    margin-bottom: 10px;
 }
+/* ーーーーーーーーーーーーーーーーーー */
+/* ----時間、電話番号、定休日-終わり--- */
+/* ーーーーーーーーーーーーーーーーーー */
 
-
-/* フッターナビ ---------------*/
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+/* ----フッターナビ---- */↓↓↓
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
 
 /* フッターナビの全体 */
 .footer-nav {
-
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px 0px;
-    margin-top: 56px;
+      /* 見た目 */
     border-top: 1px dotted #676161;
     border-bottom: 1px dotted #676161;
     background-color: #EAF9FD;
+
+    /* 文字 */
     flex-wrap: wrap;
+
+    /* 余白 */
+    padding: 20px 0px;
+    margin-top: 56px;
+
+    /* Flex/Grid */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 /* フッターナビの矢印アイコン */
 .footer-nav img {
+    /* サイズ */
     width: 30px;
-
 }
 
 
 /* フッターナビのクリック可能な範囲 */
 .footer-nav a {
+    /* 文字 */
+    font-size: 16px;
+    
+    /* Flex/Grid */
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 16px;
 }
 
 .footer-masseg {
+    /* 文字 */
     text-align: center;
 }
