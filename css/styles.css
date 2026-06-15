@@ -663,7 +663,7 @@ header a:hover .icon-area {
     object-fit: cover;
     /* （枠いっぱいに表示する※写真サイズと枠サイズが異なる時に表示｛塗りみたいなもん｝） */
 
-     /* Flex/Grid */
+    /* Flex/Grid */
     display: block;
 }
 
@@ -719,7 +719,7 @@ header a:hover .icon-area {
 
     /* サイズ */
     width: fit-content;
-    
+
     /* 余白 */
     margin: 0 auto;
     padding-left: 40px;
@@ -739,7 +739,7 @@ header a:hover .icon-area {
 
 /* カード全て */
 .service-list {
-     /* Flex/Grid */
+    /* Flex/Grid */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -750,7 +750,7 @@ header a:hover .icon-area {
 .card {
     /* サイズ */
     width: 198px;
-    
+
     /* アニメーション （Javascriptで下から表示）*/
     opacity: 0;
     transform: translate(0, 80px);
@@ -817,7 +817,7 @@ header a:hover .icon-area {
     /* サイズ */
     width: 100%;
     height: 100%;
-    
+
     /* Flex/Grid */
     display: flex;
     flex-direction: column;
@@ -828,7 +828,7 @@ header a:hover .icon-area {
     padding-inline: 10px;
 
     /* 配置 */
-     position: absolute;
+    position: absolute;
 
     /* アニメーション */
     opacity: 0;
@@ -852,7 +852,7 @@ header a:hover .icon-area {
     /* 余白 */
     margin-top: 10px;
 
-     /* 文字 */
+    /* 文字 */
     color: #fff;
     text-align: center;
 }
@@ -903,7 +903,7 @@ header a:hover .icon-area {
 }
 
 /* 文章 */
-.message p{
+.message p {
     /* 見た目 */
     border-bottom: 3px solid #007DAF;
 
@@ -921,7 +921,7 @@ header a:hover .icon-area {
 .message-cover {
     /* 見た目 */
     background-color: #1856A2;
-    
+
     /* サイズ */
     width: 0%;
     height: 100%;
@@ -1049,146 +1049,190 @@ header a:hover .icon-area {
 
 
 /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
-/* ----料金プラン---- */
+/* ----料金プラン----↓↓↓↓ */
 /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
 table {
-    margin: 32px auto;
+    /* サイズ */
+    /* 隣接するセルの枠線を重ね合わせて1本にまとめる */
     border-collapse: collapse;
+    /* セル間の間隔 */
     border-spacing: 0;
+
     min-width: 650px;
     width: 80%;
-    table-layout: fixed;
 
+    /* 余白 */
+    margin: 32px auto;
+
+    /* アニメーション　（Javascriptで下から表示） */
     opacity: 0;
     transform: translate(0, 80px);
     transition: all 1s ease;
 }
 
 table.show {
+    /* アニメーション　（Javascriptで下から表示） */
     opacity: 1;
     transform: translate(0, 0px);
 }
 
+/* 料金表の全体 */
 .price {
     overflow-x: auto;
+    /* 横幅超えた際の横スクロールバー */
 }
 
-
-th,
-td {
+/* セル全て */
+th,td {
+    /* 見た目 */
     border: 1px solid #245B9C;
+    /* 文字 */
     text-align: center;
+    /* 余白 */
     padding: clamp(10px, 12vw, 20px);
 }
 
+/* thのアイコン */
 table img {
+    /* サイズ */
     width: clamp(15px, 3vw, 40px);
 }
 
 
 /* 最初の縦一列 */
 thead th:first-child {
-    /* width: clamp(100px, 12vw, 168px); */
+    /* サイズ */
     width: 15%;
+
+    /* 見た目 */
     border: none;
     background: transparent;
 }
 
 /* 左2つ目の縦一列 */
 thead th:nth-child(2) {
-    /* width: clamp(210px, 12vw, 300px); */
+     /* サイズ */
     width: 23%;
+
+    /* 見た目 */
     border-radius: 10px 0 0 0;
     border-top-color: transparent;
     border-left-color: transparent;
+    background-color: #9FD8EF;
 }
 
 /* 左3つ最の縦一列 */
 thead th:nth-child(3) {
-    border-top-color: transparent;
-    /* width: clamp(230px, 12vw, 500px); */
+    /* サイズ */
     width: 27%;
 
-}
-
-tbody tr:first-child th:first-child {
-    border-radius: 10px 0 0 0;
+    /* 見た目 */
+    background-color: #9FD8EF;
+    border-top-color: transparent;
 }
 
 /* 最後の縦一列 */
 thead th:last-child {
+    /* サイズ */
     width: 35%;
+
+    /* 文字 */
     color: #ffffff;
+
+    /* 見た目 */
     background-color: #007DAF;
     border: 4px solid #F2C35E;
     border-bottom: none;
-
 }
 
-/* ペットシッター弁用 */
-thead th:last-child p {
-    font-size: clamp(18px, 2.5vw, 32px);
-}
-
+/* 30分のセル */
 tbody tr:first-child th:first-child {
+    /* 見た目 */
     border-radius: 10px 0 0 0;
     border-top-color: transparent;
     border-left-color: transparent;
 }
 
+/* 60分のセル */
 tbody tr:nth-child(2) th:first-child {
+    /* 見た目 */
     border-left-color: transparent;
 }
 
+/* 90分のセル */
 tbody tr:last-child th:first-child {
+    /* 見た目 */
     border-radius: 0 0 0 10px;
     border-bottom-color: transparent;
     border-left-color: transparent;
+    
 }
 
+/* 8000円のセル */
+tbody tr:last-child td:last-child {
+    /* 見た目 */
+    border-bottom: 4px solid #F2C35E;
+}
 
 /* シッター＋家事 */
 .plan-text {
-    text-align: left;
+    /* 文字 */
     font-size: clamp(12px, 2vw, 24px);
     font-weight: 800;
     white-space: nowrap;
+    text-align: left;
 }
 
+/* 一番上の横列の文字（家事代行、ペットシッター弁用） */
 thead p {
+    /* 文字 */
     font-size: clamp(24px, 3vw, 32px);
 }
 
+/* 一番上の横列の文字（単発、定期・月4回） */
 thead span {
+    /* 文字 */
     font-size: clamp(12px, 1.8vw, 18px);
 }
 
-tbody td,
-tbody th {
+/* 〇分、〇円の大きい数字部分 */
+tbody td{
+    /* 文字 */
     font-size: clamp(20px, 5vw, 40px);
     font-weight: bold;
     white-space: nowrap;
 }
 
-/* 1500 */
-.plan-price {
+tbody th{
+    /* 文字 */
     font-size: clamp(20px, 5vw, 40px);
     font-weight: bold;
-    color: #FF5D00;
+    white-space: nowrap;
 
-}
-
-tbody td:last-child {
-    background-color: #FFF8E8;
-}
-
-tbody th,
-thead th:nth-child(2),
-thead th:nth-child(3) {
+    /* 見た目 */
     background-color: #9FD8EF;
 }
 
-.plan-head {
+/* 1500円、6500円、8000円、*/
+.plan-popular-price{
+    /* 文字 */
+    font-size: clamp(20px, 5vw, 40px);
+    font-weight: bold;
+    color: #FF5D00;
+}
+
+/* 家事代行の料金部分の背景 */
+tbody td:last-child {
+    /* 見た目 */
+    background-color: #FFF8E8;
+    border-left: 4px solid #F2C35E;
+    border-right: 4px solid #F2C35E;
+}
+
+
+/* 一番上の列（家事代行、ペットシッター弁用） */
+.plan-thead {
+    /* Flex/Grid */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1196,24 +1240,39 @@ thead th:nth-child(3) {
 }
 
 /* 円・分 */
-tbody span {
+.min, .yen{
+    /* 文字 */
     font-size: clamp(16px, 12vw, 24px);
-
 }
 
-.recommend {
+/* ペットシッター弁用の青い部分 */
+.plan-popular{
+    /* 配置（人気NO.1の親要素） */
     position: relative;
 }
 
-.badge {
+/* ペットシッター弁用 */
+thead th:last-child p {
+    /* サイズ */
+    font-size: clamp(18px, 2.5vw, 32px);
+}
+
+/* 人気NO.1 */
+.plan-no1 {
+    /* 配置 */
     position: absolute;
     top: -80px;
     right: clamp(-10px, 5vw, -60px);
+
+    /* サイズ */
     width: clamp(100px, 12vw, 150px);
-    transform-origin: bottom center;
+
+    /* アニメーション */
     animation: swing 1s infinite linear;
+    transform-origin: bottom center;
 }
 
+/* 人気NO.1のアニメーション */
 @keyframes swing {
     0% {
         transform: rotate(-5deg);
@@ -1229,60 +1288,59 @@ tbody span {
 }
 
 
-/* 黄色の枠線 */
-thead th:last-child,
-tbody td:last-child {
-    border-left: 4px solid #F2C35E;
-    border-right: 4px solid #F2C35E;
-}
-
-tbody tr:last-child td:last-child {
-    border-bottom: 4px solid #F2C35E;
-    border-radius: 0 0 16px 16px;
-}
-
-
-
 /* その他の料金（下の水色ボックス） */
 .price-info {
+    /* 見た目 */
     background-color: #EAF9FD;
-    width: 80%;
-    max-width: 1054px;
-    min-height: 170px;
-    padding: 15px 30px;
-    margin: 0 auto;
     border-radius: 10px;
-    display: flex;
-    align-items: start;
-    gap: 32px;
+
+    /* 文字 */
     flex-wrap: wrap;
     font-size: clamp(16px, 3vw, 24px);
 
+    /* サイズ */
+    width: 80%;
+    max-width: 1054px;
+    min-height: 170px;
+
+    /* 余白 */
+    padding: 15px 30px;
+    margin: 0 auto;
+
+    /* Flex/Grid */
+    display: flex;
+    align-items: start;
+    gap: 32px;
+
+    /* アニメーション　（Javascriptで下から表示） */
     opacity: 0;
     transform: translate(0, 80px);
     transition: all 1s ease;
 }
 
 .price-info.show {
+    /* アニメーション　（Javascriptで下から表示） */
     opacity: 1;
     transform: translate(0, 0px);
 }
 
 
-/* （水色の四角形のul）  */
+/* 水色の四角形のul*/
 .info-box ul {
-    padding-left: 0px;
+    /* 見た目 */
     list-style-position: inside;
+
+    /* 余白 */
+    padding-left: 0px;
 }
 
 /* 水色の四角形のli （左を開けることで四角と点々を揃えた） */
 .info-box li {
-    margin-left: 50px;
+    /* サイズ */
     max-width: 500px;
+    /* 余白 */
+    margin-left: 50px;
 }
-
-
-
 
 /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
 /* ----ご利用の流れ---- */
@@ -1290,6 +1348,7 @@ tbody tr:last-child td:last-child {
 
 /* （タイトル以外の下の詳細） */
 .flow-list {
+    /* アニメーション　（Javascriptで下から表示） */
     display: flex;
     justify-content: center;
     gap: 0px;
@@ -1298,44 +1357,53 @@ tbody tr:last-child td:last-child {
 
 /* 詳細の小文字（文字サイズと範囲） */
 .flow-card p {
+    /* 文字 */
     font-size: 16px;
+
+    /* サイズ */
     width: 230px;
 }
 
 
 /* 矢印図形（形と文字の位置） */
 .flow-card {
+    /* 図形 */
     clip-path: polygon(84% 0, 97% 49%, 85% 100%, 0% 100%, 14% 49%, 0% 0%);
+
+    /* サイズ */
     width: 350px;
     height: 261px;
+
+    /* 余白 */
     margin-bottom: 20px;
-    text-align: left;
     padding: 60px 0px 0px 55px;
+
+    /* 文字 */
+    text-align: left;
 }
 
 /* 図形と文字と数字のセット（数字の基準となる範囲と図形の間隔） */
 .flow-item {
-    position: relative;
+    /* 余白 */
     margin-left: -39px;
 
+    /* アニメーション　（Javascriptで下から表示） */
+    position: relative;
     opacity: 0;
     transform: translate(0, 80px);
     transition: all 1s ease;
 }
 
 .flow-item.show {
+    /* アニメーション　（Javascriptで下から表示） */
     opacity: 1;
     transform: translate(0, 0px);
 }
 
-
-
-
-
 .flow-item:first-child {
+    /* 余白 */
     margin-left: 0px;
 }
-
 
 /* 矢印図形（01色） */
 .flow-item:first-child .flow-card {
@@ -1358,30 +1426,30 @@ tbody tr:last-child td:last-child {
     background-color: #D0DEEF;
 }
 
-
 /* 03のh3のカーニング */
 .flow-item:nth-child(3) h3 {
     letter-spacing: -0.07em;
 }
 
-
-
-
 /* (01. 02. 03. 04.)の数字部分 */
 .flow-number {
+    /* 文字 */
     font-size: 64px;
     font-weight: bold;
     color: #1856A2;
+
+    /* 配置 */
     position: absolute;
     z-index: 999;
     top: -35px;
     left: 20px;
 }
 
-/* (お問合せからサービス開始までの流れのタイトル部分) */
+/* お問合せからサービス開始までの流れのタイトル部分)*/
 .flow-card h3 {
     /* 文字 */
     font-size: 24px;
+    /* 余白 */
     margin: 10px 0;
 }
 
@@ -1429,7 +1497,7 @@ form span {
 }
 
 /* フォームの項目文字 */
-form p{
+form p {
     /* 文字 */
     font-size: 32px;
     font-weight: bold;
@@ -1459,6 +1527,7 @@ input[type="radio"] {
     /* 余白 */
     margin-right: 32px;
 }
+
 /* ーーーーーーーーーーーーーーーーーー */
 /* ----ラジオボックス-終わり--- */
 /* ーーーーーーーーーーーーーーーーーー */
@@ -1485,7 +1554,7 @@ textarea {
     width: 100%;
     min-width: 500px;
     height: 100px;
-    
+
     /* 余白 */
     padding: 0 10px;
 
@@ -1507,6 +1576,7 @@ input::placeholder {
 input[type="submit"] {
     /* 見た目 */
     background-color: transparent;
+    border-color: transparent;
     text-align: center;
 
     /* 文字 */
@@ -1524,6 +1594,7 @@ input[type="submit"] {
     /* 配置 */
     position: relative;
     z-index: 2;
+    
 }
 
 .contact-buttun {
@@ -1583,7 +1654,7 @@ input[type="submit"] {
     display: flex;
     justify-content: center;
     gap: 20px;
-    
+
 }
 
 /* 時間、電話番号、定休日のli */
@@ -1601,6 +1672,7 @@ input[type="submit"] {
     align-items: center;
     gap: 5px;
 }
+
 /* ーーーーーーーーーーーーーーーーーー */
 /* ----時間、電話番号、定休日-終わり--- */
 /* ーーーーーーーーーーーーーーーーーー */
@@ -1610,44 +1682,55 @@ input[type="submit"] {
 /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
 
 /* フッターナビの全体 */
-.footer-nav {
-      /* 見た目 */
+footer nav{
+    /* Flex/Grid */
+    display: none;  
+}
+
+footer ul{
+     /* 見た目 */
     border-top: 1px dotted #676161;
     border-bottom: 1px dotted #676161;
     background-color: #EAF9FD;
+    list-style-type: none;
+    
+    /* Flex/Grid */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 
     /* 文字 */
     flex-wrap: wrap;
 
     /* 余白 */
     padding: 20px 0px;
-    margin-top: 56px;
+    margin-top: 20px;
+}
 
-    /* Flex/Grid */
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+footer li{
+    white-space: nowrap;
 }
 
 /* フッターナビの矢印アイコン */
-.footer-nav img {
+footer img {
     /* サイズ */
     width: 30px;
 }
 
 
 /* フッターナビのクリック可能な範囲 */
-.footer-nav a {
+footer a {
     /* 文字 */
     font-size: 16px;
-    
+
     /* Flex/Grid */
     display: flex;
     align-items: center;
     gap: 8px;
+    
 }
 
-.footer-masseg {
+footer p{
     /* 文字 */
     text-align: center;
 }
