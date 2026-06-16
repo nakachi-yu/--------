@@ -855,43 +855,160 @@
 
     /* --------お問い合わせ↓↓↓↓ーーーーーーーーーーー */
 
+    /* お問い合わせの全体 */
+    #contact {
+        /* 余白 */
+        padding-block: 32px;
+    }
+
+    /* フッターコンテンツのお問合せの文字 */
+    #contact h2 {
+        /* 文字 */
+        font-size: 32px;
+
+        /* 余白 */
+        margin-bottom: 56px;
+    }
+
+    /* フォームの必須 */
+    form span {
+        /* 文字 */
+        font-size: 14px;
+    }
+
+    /* フォームの項目文字 */
+    form p {
+        /* 文字 */
+        font-size: 18px;
+
+        /* 余白 */
+        margin-bottom: 32px;
+    }
+
+    /* ーーーーーーーーーーーーーーーーーー */
+    /* ----ラジオボックス-始め-↓↓↓↓- */
+    /* ーーーーーーーーーーーーーーーーーー */
+
+    /* ラジオボックスの丸*/
+    input[type="radio"] {
+        /* 余白 */
+        margin-right: 10px;
+    
+    }
+
+    /* ラジオボックスの文字*/
+    .contact-font {
+        /* 文字 */
+        font-size: clamp(14px, 2vw, 18px);
+
+        /* 余白 */
+        margin-right: 10px;
+        margin-top: 10px;
+
+        display: flex;
+    }
+
+    /* ーーーーーーーーーーーーーーーーーー */
+    /* ----ラジオボックス-終わり--- */
+    /* ーーーーーーーーーーーーーーーーーー */
+
+    form{
+        width: 90%;
+    }
+
+    label{
+        display: block;
+        width: 100%;
+    }
+
+    /* 長方形の入力ボックス */
+    input:not(input[type="radio"]):not(input[type="submit"]) {
+        /* サイズ */
+        width: 100%;
+        min-width: auto;
+        height: 40px;
+
+        /* 文字 */
+        line-height: 40px;
+        font-size: 16px;
+    }
+
+    /* ご相談内容 */
+    textarea {
+        /* サイズ */
+        
+        min-width: auto;
+        height: 100px;
+
+        /* 文字 */
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    /* ーーーーーーーーーーーーーーーーーー */
+    /* ----お問い合わせの送信ボタン-始め↓↓↓↓ */
+    /* ーーーーーーーーーーーーーーーーーー */
+    input[type="submit"] {
+        /* 文字 */
+        font-size: 24px;
+
+        /* サイズ */
+        width: 100%;
+        min-width: auto;
+        height: 50px;
+    }
+
+    .contact-buttun {
+        /* サイズ */
+        width: 80%;
+    }
+
+    /* ーーーーーーーーーーーーーーーーーー */
+    /* ----お問い合わせの送信ボタン-終わり--- */
+    /* ーーーーーーーーーーーーーーーーーー */
 
 
+    /* ーーーーーーーーーーーーーーーーーー */
+    /* ----時間、電話番号、定休日-始め↓↓↓ */
+    /* ーーーーーーーーーーーーーーーーーー */
 
+    /* 時間、電話番号、定休日のimg */
+    #contact img {
+        /* サイズ */
+        width: 30px;
+    }
 
+    /* 時間、電話番号、定休日のul */
+    #contact ul {
+        /* 余白 */
+        margin-bottom: 32px;
 
+        /* Flex/Grid */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
 
+    }
 
+    /* 時間、電話番号、定休日のli */
+    #contact li {
+        /* 文字 */
+        font-size: 16px;
+        font-weight: 500;
 
+        /* 余白 */
+        margin-bottom: 0px;
 
+        /* Flex/Grid */
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    /* ーーーーーーーーーーーーーーーーーー */
+    /* ----時間、電話番号、定休日-終わり--- */
+    /* ーーーーーーーーーーーーーーーーーー */
 
     /* --------お問い合わせ↑↑↑↑↑ーーーーーーーーーーー */
 
