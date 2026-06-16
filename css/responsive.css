@@ -649,11 +649,80 @@ section:not(.fv){
     text-align: center;
 }
 
+/* --------サービス内容↑↑↑↑↑ーーーーーーーーーーー */
+
+/* --------対応エリア↓↓↓↓ーーーーーーーーーーー */
 
 
+/* 地域リスト */
+.area-list {
+    /* 文字 */
+    font-size: 24px;
+
+    /* 余白 */
+    margin: 0 auto;
+
+    /* サイズ */
+    width: 480px;
+}
+
+/* 角丸の水色　江戸川区　浦安市　市川市 */
+.area-list li {
+    /* 見た目 */
+    background-color: #9FD8EF;
+    border-radius: 30px;
+
+    /* 文字 */
+    text-align: center;
+    font-size: 20px;
+
+    /* サイズ */
+    width: 120px;
+
+    /* 余白 */
+    padding: 5px;
+    margin: 5px;
+}
+
+/* 東京と千葉の列 */
+.area-row {
+    /* 見た目 */
+    border-bottom: 2px solid #2A5596;
+
+    /* Flex/Grid */
+    gap: 0px;
+}
 
 
+/* 江戸川区、浦安市と市川市のul */
+.city-list {
+    /* 見た目*/
+    list-style-type: none;
 
+    /* 余白 */
+    padding: 0;
+    margin: 0;
+
+    /* Flex/Grid */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0px;
+}
+
+/* ｛浦安市｝浦安市と市川市の間を調整した */
+.area-row:last-child .city-list li:first-child{
+    /* 余白 */
+    margin-bottom: 0;
+}
+
+/* 下の※印 */
+.area-note {
+    /* 文字 */
+    font-size: 14px;
+}
+
+/* --------対応エリア↑↑↑↑↑ーーーーーーーーーーー */
 
 
 
