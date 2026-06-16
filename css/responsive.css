@@ -286,11 +286,36 @@
 
 
 /* --------ボディー↓↓↓↓ーーーーーーーーーーー */
+body {
+    /* 文字 */
+    /* font-family: 'Kiwi Maru', serif; */
+    font-family: 'Noto Sans JP', sans-serif;
+
+    /* 余白 */
+    margin-top: 60px;
+}
 
 
+/* 全体 */
+section:not(.fv){
+    padding: clamp(32px, 3vw, 16px);
+}
 
 
+.section-title {
+    /* 文字 */
+    font-size: 32px;
+    text-align: center;
 
+    /* 余白 */
+    margin-bottom: 32px;
+}
+
+.section-title::before {
+    /* サイズ */
+    width: 4px;
+    height: 40px;
+}
 
 
 
@@ -545,33 +570,24 @@
 .container-notice {
     /* 余白 */
     margin: 0 auto;
-    padding: 56px;
+    /* padding: 26px; */
 
-    /* 見た目 */
-    background-color: #faf8f5;
 }
 
 /* ご利用についての赤い外枠 */
 .notice-wrap {
-    /* サイズ */
-    max-width: 1130px;
-    border-radius: 8px;
-    border: 4px dotted #BD373A;
-    background-color: #fff;
-
     /* 余白 */
-    padding: 56px 28px;
+    padding: 10px;
     margin: 0 auto;
 }
 
 /* ご利用についてのタイトル */
 .notice-wrap h2 {
     /* 余白 */
-    margin-bottom: 32px;
-    margin-top: 0px;
+    margin-bottom: 10px;
 
     /* 文字 */
-    font-size: 28px;
+    font-size: 20px;
     color: black;
     text-align: center;
 }
@@ -579,10 +595,8 @@
 /* ご利用についての箇条書き */
 .notice-wrap ul {
     /* Flex/Grid */
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 10px 50px;
-
+    display: flex;
+   
     /* 文字 */
     flex-wrap: wrap;
 
@@ -591,12 +605,12 @@
 
     /* 余白 */
     margin: 0 auto;
-    padding-left: 40px;
+    padding-left: 20px;
 }
 
 .notice-wrap li {
     /* 文字 */
-    font-size: 16px;
+    font-size: 14px;
 
     /* サイズ */
     max-width: 550px;
