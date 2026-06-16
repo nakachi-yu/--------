@@ -1707,10 +1707,7 @@ input[type="submit"] {
 /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
 
 /* フッターナビの全体 */
-footer nav{
-    /* Flex/Grid */
-    display: none;  
-}
+
 
 footer ul{
      /* 見た目 */
