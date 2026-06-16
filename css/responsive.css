@@ -209,6 +209,43 @@
 @media screen and (max-width: 767px) {
 
 
+      /* --------ボディー↓↓↓↓ーーーーーーーーーーー */
+    body {
+        /* 文字 */
+        /* font-family: 'Kiwi Maru', serif; */
+        font-family: 'Noto Sans JP', sans-serif;
+
+        /* 余白 */
+        margin-top: 60px;
+    }
+
+
+    /* 全体 */
+    section:not(.fv) {
+        padding-block: clamp(32px, 3vw, 16px);
+        padding-inline: clamp(14px, 3vw, 26px);
+    }
+
+
+    .section-title {
+        /* 文字 */
+        font-size: 32px;
+        text-align: center;
+
+        /* 余白 */
+        margin-bottom: 32px;
+    }
+
+    .section-title::before {
+        /* サイズ */
+        width: 4px;
+        height: 40px;
+    }
+
+    /* --------ボディー↑↑↑ーーーーーーーーーーー */
+
+    /* --------ヘッダー↓↓↓↓ーーーーーーーーーーー */
+
     /* --------ハンバーガーメニュー↓↓↓↓ーーーーー */
     .hamburger {
         /* サイズ */
@@ -284,44 +321,6 @@
 
     /* --------ハンバーガーメニュー↑↑↑ーーーーー */
 
-
-    /* --------ボディー↓↓↓↓ーーーーーーーーーーー */
-    body {
-        /* 文字 */
-        /* font-family: 'Kiwi Maru', serif; */
-        font-family: 'Noto Sans JP', sans-serif;
-
-        /* 余白 */
-        margin-top: 60px;
-    }
-
-
-    /* 全体 */
-    section:not(.fv) {
-        padding-block: clamp(32px, 3vw, 16px);
-        padding-inline: clamp(14px, 3vw, 26px);
-    }
-
-
-    .section-title {
-        /* 文字 */
-        font-size: 32px;
-        text-align: center;
-
-        /* 余白 */
-        margin-bottom: 32px;
-    }
-
-    .section-title::before {
-        /* サイズ */
-        width: 4px;
-        height: 40px;
-    }
-
-    /* --------ボディー↑↑↑ーーーーーーーーーーー */
-
-
-    /* --------ヘッダー↓↓↓↓ーーーーーーーーーーー */
     header {
         /* サイズ */
         height: 60px;
@@ -559,6 +558,105 @@
 
     /* --------ファーストブュー↓↓↓↓ーーーーーーーーーーー */
 
+/* スクロールダウンの位置 */
+.scroll {
+    /* Flex/Grid */
+    display: none;
+}
+
+/* ファーストビューの全体（文字と写真を横並びにした） */
+.fv {
+    /* サイズ */
+    width: 100%;
+    height: clamp(600px, 10vw, 800px);
+
+    /* 配置 */
+    position: relative;
+}
+
+/* キャッチコピー（左範囲） */
+.fv-container {
+    /* サイズ */
+    width: 100%;
+
+    /* 見た目 */
+     background-image: linear-gradient(150deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 62%, rgba(255, 255, 255, 0));
+
+    /* 配置 */
+    position: absolute;
+    top: -56px;
+    left: 0;
+    z-index: 2;
+}
+
+
+/* キャッチコピー（左範囲の中身） */
+.fv-detail {
+    /* 余白 */
+    margin-top: 20px;
+    margin-left: 10px;
+}
+    
+
+.fv-detail p{
+    /* 文字 */
+    color: #525252;
+}
+
+/* ファーストブューのイラスト */
+.fv-illust {
+    /* Flex/Grid */
+   display: none;
+}
+
+/* キャッチコピー*/
+.fv-container h1 {
+    /* 文字 */
+    font-size: clamp(32px, 5vw, 80px);
+    text-shadow: 2px 3px 3px rgba(77, 77, 77, 0.4);
+}
+
+
+/* キャッチコピーの文字 */
+.fv-detail h1 span {
+    /* 文字（スプライト柄） */
+    color: transparent;
+    background: repeating-linear-gradient(45deg, #139dff 0 4px, #AEE8FF 4px 6px);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+/* fvの詳細（文字サイズ） */
+.fv-container p {
+    /* 文字 */
+    font-size: clamp(16px, 2vw, 24px);
+
+    /* サイズ */
+    width: 90%;
+
+    /* 余白 */
+    margin-bottom: 310px;
+}
+
+
+/* fvのボタン（レイアウト、文字設定） */
+.fv-a {
+    /* サイズ */
+    width: 80%;
+    max-height: 50px;
+
+    /* 文字 */
+    font-size: clamp(16px, 2vw, 24px);
+}
+
+/* スライドショー */
+.slideshoe {
+    /* サイズ */
+    width: 100%;
+    height: clamp(600px, 10vh, 800px);
+}
 
 
 
@@ -568,6 +666,45 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
 
 
@@ -893,7 +1030,7 @@
     input[type="radio"] {
         /* 余白 */
         margin-right: 10px;
-    
+
     }
 
     /* ラジオボックスの文字*/
@@ -912,11 +1049,11 @@
     /* ----ラジオボックス-終わり--- */
     /* ーーーーーーーーーーーーーーーーーー */
 
-    form{
+    form {
         width: 90%;
     }
 
-    label{
+    label {
         display: block;
         width: 100%;
     }
@@ -936,7 +1073,7 @@
     /* ご相談内容 */
     textarea {
         /* サイズ */
-        
+
         min-width: auto;
         height: 100px;
 
@@ -1014,63 +1151,54 @@
 
     /* --------フッター↓↓↓↓ーーーーーーーーーーー */
 
+    /* フッターナビの全体 */
+    footer ul {
+        /* 見た目 */
+        border-top: 1px dotted #676161;
+        border-bottom: 1px dotted #676161;
+        background-color: #EAF9FD;
+        list-style-type: none;
+
+        /* Flex/Grid */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+
+        /* 文字 */
+        flex-wrap: wrap;
+
+        /* 余白 */
+        padding: 20px 16px;
+        margin-top: 20px;
+    }
+
+    footer li {
+        white-space: wrap;
+    }
+
+    /* フッターナビの矢印アイコン */
+    footer img {
+        /* サイズ */
+        width: 20px;
+    }
 
 
+    /* フッターナビのクリック可能な範囲 */
+    footer a {
+        /* 文字 */
+        font-size: 12px;
 
+        /* Flex/Grid */
+        gap: 3px;
 
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    footer p {
+        /* 文字 */
+        text-align: center;
+        font-size: 14px;
+    }
 
     /* --------フッター↑↑↑↑↑ーーーーーーーーーーー */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
