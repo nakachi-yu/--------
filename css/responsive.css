@@ -298,7 +298,8 @@ body {
 
 /* 全体 */
 section:not(.fv){
-    padding: clamp(32px, 3vw, 16px);
+    padding-block: clamp(32px, 3vw, 16px);
+    padding-inline: clamp(14px, 3vw, 26px);
 }
 
 
@@ -316,12 +317,6 @@ section:not(.fv){
     width: 4px;
     height: 40px;
 }
-
-
-
-
-
-
 /* --------ボディー↑↑↑ーーーーーーーーーーー */
 
 
@@ -570,8 +565,6 @@ section:not(.fv){
 .container-notice {
     /* 余白 */
     margin: 0 auto;
-    /* padding: 26px; */
-
 }
 
 /* ご利用についての赤い外枠 */
@@ -585,11 +578,9 @@ section:not(.fv){
 .notice-wrap h2 {
     /* 余白 */
     margin-bottom: 10px;
-
     /* 文字 */
     font-size: 20px;
-    color: black;
-    text-align: center;
+
 }
 
 /* ご利用についての箇条書き */
@@ -616,15 +607,47 @@ section:not(.fv){
     max-width: 550px;
 }
 
+/* --------ご利用にあたってー↑↑↑ーーーーーーーーーーー */
+
+/* --------サービス内容↓↓↓↓ーーーーーーーーーーー */
+
+/* 青いカード全て */
+.service-list {
+    /* Flex/Grid */
+    gap: 56px;
+}
+
+/* 青いカードの下にある黒文字詳細 （箇条書き全体）*/
+.card ul {
+    /* 余白 */
+    padding-left: 20px;
+}
 
 
+/* 青いカードの下にある黒文字詳細 （箇条書き）*/
+.card li {
+    /* 文字 */
+    font-size: 14px;
+}
 
 
+/* 青いカード */
+.card-top {
+    /* 余白 */
+    margin-bottom: 24px;
+}
 
+.message{
+    padding-inline: 0;
+}
 
-
-
-
+/* 文章 */
+.message p {
+    /* 文字 */
+    font-size: clamp(18px, 2vw, 24px);
+    white-space: wrap;
+    text-align: center;
+}
 
 
 
