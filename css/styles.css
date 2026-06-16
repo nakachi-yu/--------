@@ -75,8 +75,7 @@ section:not(.fv) {
     padding-block: clamp(56px, 8vw, 96px);
 }
 
-h1,
-h2 {
+h1,h2 {
     /* 文字　共通の色（スプライト柄） */
     color: transparent;
     background: repeating-linear-gradient(45deg, #087ED2 0 4px, #AEE8FF 4px 6px);
@@ -185,8 +184,8 @@ header {
 /* ロゴ */
 .logo {
     /* サイズ */
-    width: 90px;
-    height: 90px;
+  width: 90px;
+  height: 100%;
 
     /* 余白 */
     padding: 5px 5px 0 10px;
@@ -206,6 +205,7 @@ header nav {
     /* サイズ */
     height: 100%;
 
+    /* 余白 */
     margin-left: auto;
 }
 
@@ -223,11 +223,10 @@ header ul {
     height: 100%;
 }
 
-header li {
+/* 予約以外のボタン */
+header li:not(:last-child){
     /* Flex/Grid */
     display: block;
-    justify-content: space-around;
-    align-items: center;
 
     /* 折り返しなし設定 */
     white-space: nowrap;
@@ -235,7 +234,7 @@ header li {
     /* 文字 */
     font-size: clamp(10px, 1.5vw, 21px);
 
-    /* サイズ */
+    /* サイズ （ホバー時の範囲）*/
     height: 100%;
 }
 
@@ -251,11 +250,9 @@ header a {
     /* 余白 */
     padding-inline: 10px;
 
-}
-
-header nav a:not(.contact-btn){
     /* サイズ */
     height: 100%;
+
 }
 
 
@@ -311,11 +308,15 @@ header a:hover .icon-area {
     padding: 10px 20px;
     margin-right: 5px;
 
+    margin: auto;
+
     /* Flex/Grid */
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    align-self: center;
+
+ 
 
     /* 折り返しなし設定 */
     white-space: nowrap;
@@ -453,6 +454,12 @@ header a:hover .icon-area {
         transform: scale(1, 0);
         transform-origin: 0 100%;
     }
+}
+
+
+.logo{
+    background: url(../img/logo-mark.jpg) no-repeat center/contain;
+    margin-left: 10px;
 }
 
 
