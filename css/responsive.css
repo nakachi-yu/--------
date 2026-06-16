@@ -725,6 +725,9 @@ section:not(.fv){
 /* --------対応エリア↑↑↑↑↑ーーーーーーーーーーー */
 
 
+/* --------料金プラン↓↓↓↓ーーーーーーーーーーー */
+
+/* --------料金プラン↑↑↑↑↑ーーーーーーーーーーー */
 
 
 
@@ -736,9 +739,30 @@ section:not(.fv){
 
 
 
+/* その他の料金（下の水色ボックス） */
+.price-info {
+  /* 文字 */
+    flex-wrap: wrap;
+    font-size: clamp(16px, 3vw, 24px);
 
+    /* サイズ */
+    width: 90%;
 
+    /* 余白 */
+    padding: 10px;
+    margin: 0 auto;
 
+    /* Flex/Grid */
+    display: flex;
+    align-items: start;
+    gap: 32px;
+}
+
+/* 水色の四角形のli （左を開けることで四角と点々を揃えた） */
+.info-box li {
+    /* 余白 */
+    margin-left: 10px;
+}
 
 
 
