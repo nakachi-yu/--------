@@ -10,6 +10,16 @@
     box-sizing: border-box;
 }
 
+
+.hamburger{
+    display: none;
+}
+
+.hambur-nav{
+    display: none;
+}
+
+
 body {
     /* 文字 */
     /* font-family: 'Kiwi Maru', serif; */
@@ -195,6 +205,8 @@ header nav {
 
     /* サイズ */
     height: 100%;
+
+    margin-left: auto;
 }
 
 header ul {
@@ -227,8 +239,9 @@ header li {
     height: 100%;
 }
 
+
 /* ヘッダーのナビ文字 */
-header a:not(.contact-btn) {
+header a {
     /* Flex/Grid */
     display: flex;
     justify-content: center;
@@ -238,9 +251,13 @@ header a:not(.contact-btn) {
     /* 余白 */
     padding-inline: 10px;
 
+}
+
+header nav a:not(.contact-btn){
     /* サイズ */
     height: 100%;
 }
+
 
 /* ホバー時の背景と文字色*/
 header nav a:not(.contact-btn):hover {

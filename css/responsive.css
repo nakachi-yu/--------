@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+
+
+
+
+
+    .hamburger {
+        /* サイズ */
+        width: 50px;
+        height: 50px;
+
+        /* 配置 */
+        position: relative;
+        z-index: 2;
+
+        /* 余白 */
+        margin-left: auto;
+        border: none;
+
+        /* 見た目 */
+        background: transparent;
+        cursor: pointer;
+
+        display: flex;
+
+
+    }
+
+    .hamburger span {
+        /* 配置 */
+        position: absolute;
+        left: 50%;
+
+        /* サイズ */
+        width: 30px;
+        height: 3px;
+
+        /* 見た目 */
+        background: #000;
+
+        /* アニメーション */
+        transform: translateX(-50%);
+        transition: 0.3s;
+    }
+
+    /* 一番上の棒 */
+    .hamburger span:nth-child(1) {
+        top: 15px;
+    }
+
+    /* 真ん中の棒 */
+    .hamburger span:nth-child(2) {
+        top: 24px;
+    }
+
+    /* 一番下の棒 */
+    .hamburger span:nth-child(3) {
+        top: 33px;
+    }
+
+    /* 一番上の棒 */
+    .hamburger.active span:nth-child(1) {
+        top: 24px;
+        transform: translateX(-50%) rotate(45deg);
+    }
+
+    /* 真ん中の棒 */
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    /* 一番下の棒 */
+    .hamburger.active span:nth-child(3) {
+        top: 24px;
+        transform: translateX(-50%) rotate(-45deg);
+    }
+
+
+
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        /* ハンバーガーメニューを左に寄せた */
+        padding-right: 20px;
+        
+    }
+
+    header nav {
+        /* 見た目 */
+        background-color: #91c0e2;
+        opacity: 0.8;
+
+        /* サイズ */
+        height: 100vh;
+        width: 40%;
+
+        /* 文字 */
+        color: #fff;
+
+        /* 配置 */
+        position: fixed;
+        top: 0;
+        right: -350px;
+        z-index: 1;
+
+        /* Flex/Grid */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        /* 余白 */
+        padding-top: 100px;
+
+        transition: 1s ease-in-out;
+
+        
+
+    }
+
+
+    .log{
+        background-image: url(/img/logo.jpg);
+    }
+
+
+
+    header nav ul {
+        /* Flex/Grid */
+        display: inline-block;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+
+
+    }
+
+    header nav li {
+        /* 文字 */
+        color: #fff;
+
+        /* 余白 */
+        padding: 0;
+        margin: 0;
+        
+        /* サイズ */
+        height: 10%;
+        width: 100%;
+
+        border-top: 1px solid #0000006e;
+        
+    }
+
+    header nav li a {
+        /* 文字 */
+        color: #000;
+        font-size: 16px;
+
+       
+    }
+
+    .contact-btn{
+        /* 文字 */
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        gap: 5px;
+
+        /* 余白 */
+        margin-top: 32px;
+        
+    }
+
+    header nav.active {
+        /* 配置 */
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1;
+
+        /* アニメーション */
+        transition: 1s;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+@media screen and (max-width: 767px) {}
