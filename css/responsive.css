@@ -1,7 +1,11 @@
 @charset "UTF-8";
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
 
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+/* ----レスポンシブ（タブレット）---- */
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
 
 /* --------ハンバーガーメニュー↓↓↓↓ーーーーー */
     .hamburger {
@@ -195,6 +199,453 @@
     }
 
 /* --------ヘッダー↑↑↑↑ーーーーーーーーーーー */
+}
+
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+/* ----スマートフォン（タブレット）---- */
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+@media screen and (max-width: 767px) {
+
+
+/* --------ハンバーガーメニュー↓↓↓↓ーーーーー */
+    .hamburger {
+        /* サイズ */
+        width: 100%;
+        height: 50px;
+
+        /* 配置 */
+        position: relative;
+        z-index: 2;
+
+        /* 余白 */
+        margin-left: auto;
+        margin-right: 10px;
+        border: none;
+
+        /* 見た目 */
+        background: transparent;
+        cursor: pointer;
+
+        /* Flex/Grid */
+        display: flex;
+
+    }
+
+    .hamburger span {
+        /* 配置 */
+        position: absolute;
+        left: 50%;
+
+        /* サイズ */
+        width: 30px;
+        height: 3px;
+
+        /* 見た目 */
+        background: #000;
+
+        /* アニメーション */
+        transform: translateX(-50%);
+        transition: 0.3s;
+    }
+
+    /* 一番上の棒 */
+    .hamburger span:nth-child(1) {
+        top: 15px;
+    }
+
+    /* 真ん中の棒 */
+    .hamburger span:nth-child(2) {
+        top: 24px;
+    }
+
+    /* 一番下の棒 */
+    .hamburger span:nth-child(3) {
+        top: 33px;
+    }
+
+    /* 一番上の棒 */
+    .hamburger.active span:nth-child(1) {
+        top: 24px;
+        transform: translateX(-50%) rotate(45deg);
+    }
+
+    /* 真ん中の棒 */
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    /* 一番下の棒 */
+    .hamburger.active span:nth-child(3) {
+        top: 24px;
+        transform: translateX(-50%) rotate(-45deg);
+    }
+
+/* --------ハンバーガーメニュー↑↑↑ーーーーー */
+
+
+/* --------ボディー↓↓↓↓ーーーーーーーーーーー */
+
+
+
+
+
+
+
+
+
+
+
+/* --------ボディー↑↑↑ーーーーーーーーーーー */
+
+
+/* --------ヘッダー↓↓↓↓ーーーーーーーーーーー */
+    header {
+        /* サイズ */
+        height: 60px;
+        
+
+        /* Flex/Grid */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        /* ハンバーガーメニューを左に寄せた */
+        padding-right: 10px;
+    }
+
+    header nav {
+        /* 見た目 */
+        background-color: #91c0e2;
+        opacity: 0.8;
+
+        /* サイズ */
+        height: 100vh;
+        width: 40%;
+
+        /* 文字 */
+        color: #fff;
+
+        /* 配置 */
+        position: fixed;
+        top: 0;
+        right: -500px;
+        z-index: 1;
+
+        /* Flex/Grid */
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        /* 余白 */
+        padding-top: 100px;
+        transition: 1s ease-in-out;
+    }
+
+    .logo {
+        /* 見た目 */
+        background: url(../img/logo.jpg) no-repeat center/contain;
+
+        /* サイズ */
+        height: 100%;
+        width: 70%;
+    }
+
+
+    header nav ul {
+        /* Flex/Grid */
+        display: inline-block;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+
+        /* サイズ */
+        height: fit-content;
+    }
+
+    header nav li {
+        /* 文字 */
+        color: #fff;
+
+        /* 余白 */
+        padding: 0;
+        margin: 0;
+
+        /* サイズ */
+        width: 100%;
+        height: fit-content;
+
+        /* 見た目 */
+        border-top: 1px solid #0000006e;
+    }
+
+    header nav li a {
+        /* 文字 */
+        color: #000;
+        font-size: 16px;
+
+        /* サイズ */
+        width: 100%;
+        height: 70px;
+    }
+
+    .contact-btn {
+        /* 文字 */
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        gap: 5px;
+
+        /* 余白 */
+        margin-top: 32px;
+
+        /* サイズ */
+        width: 300px;
+        height: 50px;
+
+    }
+
+    header nav.active {
+        /* 配置 */
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1;
+
+        /* アニメーション */
+        transition: 1s;
+    }
+
+    header {
+        /* Flex/Grid */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        /* ハンバーガーメニューを左に寄せた */
+        padding-right: 20px;
+    }
+
+    header nav {
+        /* 見た目 */
+        background-color: #91c0e2;
+        opacity: 0.9;
+
+        /* サイズ */
+        height: 100vh;
+        width: 100%;
+
+        /* 文字 */
+        color: #fff;
+
+        /* 配置 */
+        position: fixed;
+        top: 0;
+        right: -500px;
+        z-index: 1;
+
+        /* Flex/Grid */
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        /* 余白 */
+        padding-top: 100px;
+        transition: 1s ease-in-out;
+    }
+
+    .logo {
+        /* 見た目 */
+        background: url(../img/logo.jpg) no-repeat center/contain;
+
+        /* サイズ */
+        height: 80%;
+        width: 90%;
+    }
+
+
+    header nav ul {
+        /* Flex/Grid */
+        display: inline-block;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+
+        /* サイズ */
+        height: fit-content;
+    }
+
+    header nav li {
+        /* 文字 */
+        color: #fff;
+
+        /* 余白 */
+        padding: 0;
+        margin: 0;
+
+        /* サイズ */
+        width: 100%;
+        height: fit-content;
+
+        /* 見た目 */
+        border-top: 1px solid #0000006e;
+    }
+
+    header nav li a {
+        /* 文字 */
+        color: #000;
+        font-size: 16px;
+
+        /* サイズ */
+        width: 100%;
+        height: 70px;
+    }
+
+    .contact-btn {
+        /* 文字 */
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        gap: 5px;
+
+        /* 余白 */
+        margin-top: 32px;
+
+        /* サイズ */
+        width: 250px;
+        height: 50px;
+
+    }
+
+    header nav.active {
+        /* 配置 */
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1;
+
+        /* アニメーション */
+        transition: 1s;
+    }
+
+
+/* --------ヘッダー↑↑↑ーーーーーーーーーーー */
+
+
+
+
+/* --------ご利用にあたってー↓↓↓↓ーーーーーーーーーーー */
+
+/* ご利用についての全体*/
+.container-notice {
+    /* 余白 */
+    margin: 0 auto;
+    padding: 56px;
+
+    /* 見た目 */
+    background-color: #faf8f5;
+}
+
+/* ご利用についての赤い外枠 */
+.notice-wrap {
+    /* サイズ */
+    max-width: 1130px;
+    border-radius: 8px;
+    border: 4px dotted #BD373A;
+    background-color: #fff;
+
+    /* 余白 */
+    padding: 56px 28px;
+    margin: 0 auto;
+}
+
+/* ご利用についてのタイトル */
+.notice-wrap h2 {
+    /* 余白 */
+    margin-bottom: 32px;
+    margin-top: 0px;
+
+    /* 文字 */
+    font-size: 28px;
+    color: black;
+    text-align: center;
+}
+
+/* ご利用についての箇条書き */
+.notice-wrap ul {
+    /* Flex/Grid */
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px 50px;
+
+    /* 文字 */
+    flex-wrap: wrap;
+
+    /* サイズ */
+    width: fit-content;
+
+    /* 余白 */
+    margin: 0 auto;
+    padding-left: 40px;
+}
+
+.notice-wrap li {
+    /* 文字 */
+    font-size: 16px;
+
+    /* サイズ */
+    max-width: 550px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -207,5 +658,3 @@
 
 
 }
-
-@media screen and (max-width: 767px) {}
