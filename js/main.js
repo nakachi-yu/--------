@@ -196,6 +196,8 @@ $(document).ready(function () {
 
   // 下から上にふわっと現れる
 
+
+
   $(window).scroll(function () {
     $('.section-title, .card, .area-items, .area-img, .scroll-table, table, .price-info, .flow-item').each(function () {
 
