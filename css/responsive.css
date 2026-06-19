@@ -710,7 +710,7 @@
         /* サイズ */
         width: 80%;
         max-height: 50px;
-
+        
         /* 文字 */
         font-size: clamp(16px, 2vw, 24px);
     }
