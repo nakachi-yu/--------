@@ -197,7 +197,7 @@ $(document).ready(function () {
   // 下から上にふわっと現れる
 
   $(window).scroll(function () {
-    $('.section-title, .card, .area-items, .area-img, table, .price-info, .flow-item').each(function () {
+    $('.section-title, .card, .area-items, .area-img, .scroll-table, table, .price-info, .flow-item').each(function () {
 
       var targetElement = $(this).offset().top;
       var scroll = $(window).scrollTop();
