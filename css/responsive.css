@@ -109,7 +109,7 @@
         /* 配置 */
         position: fixed;
         top: 0;
-        right: -500px;
+        right: -1500px;
         z-index: 1;
 
         /* Flex/Grid */
@@ -209,7 +209,7 @@
 @media screen and (max-width: 767px) {
 
 
-      /* --------ボディー↓↓↓↓ーーーーーーーーーーー */
+    /* --------ボディー↓↓↓↓ーーーーーーーーーーー */
     body {
         /* 文字 */
         /* font-family: 'Kiwi Maru', serif; */
@@ -242,7 +242,71 @@
         height: 40px;
     }
 
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+/* ----TOPへ戻るボタン---- */
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+.button-top {
+    /* 見た目 */
+    background-color: #2A5596;
+    border-color: transparent;
+    border-radius: 50px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, .2);
+
+    /* 余白 */
+    padding: 10px 13px;
+
+    /* 配置 */
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 999;
+
+    /* 文字 */
+    color: #fff;
+    font-size: 32px;
+
+    /* Flex/Grid */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    /* アニメーション （Javascriptで下から表示）（表示前）*/
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* TOPへ戻るボタンの矢印 */
+.button-top img {
+    /* サイズ */
+    width: 25px;
+}
+
+
+    /* --------TOPへ戻るボタン↓↓↓↓ーーーーーーーーーーー */
+
+.button-top {
+    /* 余白 */
+    padding: 10px 12px;
+
+    /* 文字 */
+    color: #fff;
+    font-size: 20px;
+}
+
+/* TOPへ戻るボタンの矢印 */
+.button-top img {
+    /* サイズ */
+    width: 15px;
+}
+
+    /* --------TOPへ戻るボタン↑↑↑ーーーーーーーーーーー */
+
     /* --------ボディー↑↑↑ーーーーーーーーーーー */
+
+
 
     /* --------ヘッダー↓↓↓↓ーーーーーーーーーーー */
 
@@ -350,7 +414,7 @@
         /* 配置 */
         position: fixed;
         top: 0;
-        right: -500px;
+        right: -1500px;
         z-index: 1;
 
         /* Flex/Grid */
@@ -464,7 +528,7 @@
         /* 配置 */
         position: fixed;
         top: 0;
-        right: -500px;
+        right: -1500px;
         z-index: 1;
 
         /* Flex/Grid */
@@ -558,105 +622,105 @@
 
     /* --------ファーストブュー↓↓↓↓ーーーーーーーーーーー */
 
-/* スクロールダウンの位置 */
-.scroll {
-    /* Flex/Grid */
-    display: none;
-}
+    /* スクロールダウンの位置 */
+    .scroll {
+        /* Flex/Grid */
+        display: none;
+    }
 
-/* ファーストビューの全体（文字と写真を横並びにした） */
-.fv {
-    /* サイズ */
-    width: 100%;
-    height: clamp(600px, 10vw, 800px);
+    /* ファーストビューの全体（文字と写真を横並びにした） */
+    .fv {
+        /* サイズ */
+        width: 100%;
+        height: clamp(600px, 10vw, 800px);
 
-    /* 配置 */
-    position: relative;
-}
+        /* 配置 */
+        position: relative;
+    }
 
-/* キャッチコピー（左範囲） */
-.fv-container {
-    /* サイズ */
-    width: 100%;
+    /* キャッチコピー（左範囲） */
+    .fv-container {
+        /* サイズ */
+        width: 100%;
 
-    /* 見た目 */
-     background-image: linear-gradient(150deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 62%, rgba(255, 255, 255, 0));
+        /* 見た目 */
+        background-image: linear-gradient(150deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 62%, rgba(255, 255, 255, 0));
 
-    /* 配置 */
-    position: absolute;
-    top: -56px;
-    left: 0;
-    z-index: 2;
-}
-
-
-/* キャッチコピー（左範囲の中身） */
-.fv-detail {
-    /* 余白 */
-    margin-top: 20px;
-    margin-left: 10px;
-}
-    
-
-.fv-detail p{
-    /* 文字 */
-    color: #525252;
-}
-
-/* ファーストブューのイラスト */
-.fv-illust {
-    /* Flex/Grid */
-   display: none;
-}
-
-/* キャッチコピー*/
-.fv-container h1 {
-    /* 文字 */
-    font-size: clamp(32px, 5vw, 80px);
-    text-shadow: 2px 3px 3px rgba(77, 77, 77, 0.4);
-}
+        /* 配置 */
+        position: absolute;
+        top: -56px;
+        left: 0;
+        z-index: 2;
+    }
 
 
-/* キャッチコピーの文字 */
-.fv-detail h1 span {
-    /* 文字（スプライト柄） */
-    color: transparent;
-    background: repeating-linear-gradient(45deg, #139dff 0 4px, #AEE8FF 4px 6px);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
+    /* キャッチコピー（左範囲の中身） */
+    .fv-detail {
+        /* 余白 */
+        margin-top: 20px;
+        margin-left: 10px;
+    }
 
 
-/* fvの詳細（文字サイズ） */
-.fv-container p {
-    /* 文字 */
-    font-size: clamp(16px, 2vw, 24px);
+    .fv-detail p {
+        /* 文字 */
+        color: #525252;
+    }
 
-    /* サイズ */
-    width: 90%;
+    /* ファーストブューのイラスト */
+    .fv-illust {
+        /* Flex/Grid */
+        display: none;
+    }
 
-    /* 余白 */
-    margin-bottom: 310px;
-}
+    /* キャッチコピー*/
+    .fv-container h1 {
+        /* 文字 */
+        font-size: clamp(32px, 5vw, 80px);
+        text-shadow: 2px 3px 3px rgba(77, 77, 77, 0.4);
+    }
 
 
-/* fvのボタン（レイアウト、文字設定） */
-.fv-a {
-    /* サイズ */
-    width: 80%;
-    max-height: 50px;
+    /* キャッチコピーの文字 */
+    .fv-detail h1 span {
+        /* 文字（スプライト柄） */
+        color: transparent;
+        background: repeating-linear-gradient(45deg, #139dff 0 4px, #AEE8FF 4px 6px);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
 
-    /* 文字 */
-    font-size: clamp(16px, 2vw, 24px);
-}
 
-/* スライドショー */
-.slideshoe {
-    /* サイズ */
-    width: 100%;
-    height: clamp(600px, 10vh, 800px);
-}
+    /* fvの詳細（文字サイズ） */
+    .fv-container p {
+        /* 文字 */
+        font-size: clamp(16px, 2vw, 24px);
+
+        /* サイズ */
+        width: 90%;
+
+        /* 余白 */
+        margin-bottom: 310px;
+    }
+
+
+    /* fvのボタン（レイアウト、文字設定） */
+    .fv-a {
+        /* サイズ */
+        width: 80%;
+        max-height: 50px;
+
+        /* 文字 */
+        font-size: clamp(16px, 2vw, 24px);
+    }
+
+    /* スライドショー */
+    .slideshoe {
+        /* サイズ */
+        width: 100%;
+        height: clamp(600px, 10vh, 800px);
+    }
 
     /* --------ファーストブュー↑↑↑↑↑ーーーーーーーーーーー */
 
@@ -828,16 +892,138 @@
 
     /* --------料金プラン↓↓↓↓ーーーーーーーーーーー */
 
-  
+        /* 料金表の全体 */
+    .price {
+        overflow-x: auto;
+        /* 横幅超えた際の横スクロールバー */
+    }
+
+    .scroll-table {
+        /* Flex/Grid */
+        display: flex;
+
+        overflow-x: auto;
+        /* (横スクロール表示) */
+        overflow-y: hidden;
+        padding: 0;
+        margin-bottom: 32px;
+    }
+
+    .scroll-text {
+        /* Flex/Grid */
+        display: flex;
+        justify-content: center;
+
+        /* 文字 */
+        font-size: 14px;
+    }
+
+    table {
+        /* Flex/Grid */
+        display: table;
+    }
+
+    .scroll-table {
+        /* アニメーション　（Javascriptで下から表示） */
+        opacity: 0;
+        transform: translate(0, 80px);
+        transition: all 1s ease;
+    }
 
 
+    .scroll-table.show {
+        /* アニメーション　（Javascriptで下から表示） */
+        opacity: 1;
+        transform: translate(0, 0px);
+    }
+
+  /* 一番上の列（家事代行、ペットシッター弁用） */
+.plan-thead {
+    /* Flex/Grid */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0px, 5vw, 5px);
+    padding-block: 10px;
+}
 
 
+    /* セル全て */
+    th,
+    td {
+        /* 余白 */
+        padding: 0;
+    }
+
+    /* thのアイコン */
+    table img {
+        /* サイズ */
+        width: clamp(20px, 3vw, 40px);
+    }
+
+    /* シッター＋家事 */
+    .plan-text {
+        /* 文字 */
+        font-size: clamp(14px, 2vw, 24px);
+        font-weight: 800;
+    }
+
+    /* 一番上の横列の文字（家事代行、ペットシッター弁用） */
+    thead p {
+        /* 文字 */
+        font-size: clamp(20px, 3vw, 32px);
+        
+    }
+
+    /* 一番上の横列の文字（単発、定期・月4回） */
+    thead span {
+        /* 文字 */
+        font-size: clamp(14px, 1.8vw, 18px);
+    }
+
+    /* 〇円の大きい数字部分 */
+    tbody td {
+        /* 文字 */
+        font-size: clamp(24px, 5vw, 40px);
+    }
+
+     /* 〇分の大きい数字部分 */
+    tbody th {
+        /* 文字 */
+        font-size: clamp(24px, 5vw, 40px);
+    }
+
+    /* 1500円、6500円、8000円、*/
+    .plan-popular-price {
+        /* 文字 */
+        font-size: clamp(24px, 5vw, 40px);
+    }
 
 
+    /* 円・分 */
+    .min,
+    .yen {
+        /* 文字 */
+        font-size: clamp(12px, 5vw, 24px);
+    }
+
+    /* ペットシッター弁用の青い部分 */
+    .plan-popular {
+        /* 配置（人気NO.1の親要素） */
+        position: relative;
+    }
 
 
+    /* 人気NO.1 */
+    .plan-no1 {
+        /* 配置 */
+        position: absolute;
+        top: 20px;
+        right: clamp(-10px, 5vw, -60px);
 
+        /* サイズ */
+        width: clamp(50px, 12vw, 100px);
+    }
 
 
     /* その他の料金（下の水色ボックス） */
@@ -865,7 +1051,7 @@
         margin-left: 10px;
     }
 
-      /* --------料金プラン↑↑↑↑↑ーーーーーーーーーーー */
+    /* --------料金プラン↑↑↑↑↑ーーーーーーーーーーー */
 
     /* --------ご利用の流れ↓↓↓↓ーーーーーーーーーーー */
 
