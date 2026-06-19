@@ -828,7 +828,9 @@
         margin: 0 auto;
 
         /* サイズ */
-        width: 480px;
+        width: fit-content;
+
+        
     }
 
     /* 角丸の水色　江戸川区　浦安市　市川市 */
@@ -856,6 +858,11 @@
 
         /* Flex/Grid */
         gap: 0px;
+
+            /* Flex/Grid */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     }
 
 
